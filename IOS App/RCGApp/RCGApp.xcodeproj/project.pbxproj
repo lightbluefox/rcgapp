@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		8416D62A1B01CBF3005A8F05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8416D6291B01CBF3005A8F05 /* AppDelegate.swift */; };
-		8416D62C1B01CBF3005A8F05 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8416D62B1B01CBF3005A8F05 /* FirstViewController.swift */; };
-		8416D62E1B01CBF3005A8F05 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8416D62D1B01CBF3005A8F05 /* SecondViewController.swift */; };
+		8416D62C1B01CBF3005A8F05 /* NewsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8416D62B1B01CBF3005A8F05 /* NewsFeedViewController.swift */; };
+		8416D62E1B01CBF3005A8F05 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8416D62D1B01CBF3005A8F05 /* NewsViewController.swift */; };
 		8416D6311B01CBF3005A8F05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8416D62F1B01CBF3005A8F05 /* Main.storyboard */; };
 		8416D6331B01CBF3005A8F05 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8416D6321B01CBF3005A8F05 /* Images.xcassets */; };
 		8416D6361B01CBF3005A8F05 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8416D6341B01CBF3005A8F05 /* LaunchScreen.xib */; };
 		8416D6421B01CBF3005A8F05 /* RCGAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8416D6411B01CBF3005A8F05 /* RCGAppTests.swift */; };
+		8416D64C1B023C5E005A8F05 /* VacancyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8416D64B1B023C5E005A8F05 /* VacancyViewController.swift */; };
+		8416D64E1B023D5C005A8F05 /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8416D64D1B023D5C005A8F05 /* ContactUsViewController.swift */; };
+		8416D6501B023DA4005A8F05 /* VacancyRespondFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8416D64F1B023DA4005A8F05 /* VacancyRespondFormViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,14 +33,17 @@
 		8416D6241B01CBF3005A8F05 /* RCGApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RCGApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8416D6281B01CBF3005A8F05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8416D6291B01CBF3005A8F05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8416D62B1B01CBF3005A8F05 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		8416D62D1B01CBF3005A8F05 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		8416D62B1B01CBF3005A8F05 /* NewsFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedViewController.swift; sourceTree = "<group>"; };
+		8416D62D1B01CBF3005A8F05 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		8416D6301B01CBF3005A8F05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8416D6321B01CBF3005A8F05 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8416D6351B01CBF3005A8F05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		8416D63B1B01CBF3005A8F05 /* RCGAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RCGAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8416D6401B01CBF3005A8F05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8416D6411B01CBF3005A8F05 /* RCGAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCGAppTests.swift; sourceTree = "<group>"; };
+		8416D64B1B023C5E005A8F05 /* VacancyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VacancyViewController.swift; sourceTree = "<group>"; };
+		8416D64D1B023D5C005A8F05 /* ContactUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
+		8416D64F1B023DA4005A8F05 /* VacancyRespondFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VacancyRespondFormViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +86,11 @@
 			isa = PBXGroup;
 			children = (
 				8416D6291B01CBF3005A8F05 /* AppDelegate.swift */,
-				8416D62B1B01CBF3005A8F05 /* FirstViewController.swift */,
-				8416D62D1B01CBF3005A8F05 /* SecondViewController.swift */,
+				8416D62B1B01CBF3005A8F05 /* NewsFeedViewController.swift */,
+				8416D62D1B01CBF3005A8F05 /* NewsViewController.swift */,
+				8416D64B1B023C5E005A8F05 /* VacancyViewController.swift */,
+				8416D64D1B023D5C005A8F05 /* ContactUsViewController.swift */,
+				8416D64F1B023DA4005A8F05 /* VacancyRespondFormViewController.swift */,
 				8416D62F1B01CBF3005A8F05 /* Main.storyboard */,
 				8416D6321B01CBF3005A8F05 /* Images.xcassets */,
 				8416D6341B01CBF3005A8F05 /* LaunchScreen.xib */,
@@ -215,9 +224,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8416D62E1B01CBF3005A8F05 /* SecondViewController.swift in Sources */,
+				8416D62E1B01CBF3005A8F05 /* NewsViewController.swift in Sources */,
 				8416D62A1B01CBF3005A8F05 /* AppDelegate.swift in Sources */,
-				8416D62C1B01CBF3005A8F05 /* FirstViewController.swift in Sources */,
+				8416D6501B023DA4005A8F05 /* VacancyRespondFormViewController.swift in Sources */,
+				8416D64E1B023D5C005A8F05 /* ContactUsViewController.swift in Sources */,
+				8416D64C1B023C5E005A8F05 /* VacancyViewController.swift in Sources */,
+				8416D62C1B01CBF3005A8F05 /* NewsFeedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
