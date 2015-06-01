@@ -7,24 +7,26 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+            <rect key="frame" x="0.0" y="0.0" width="537" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BzP-eF-E2c">
-                    <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
-                    <color key="backgroundColor" red="0.86884341032608692" green="0.11895825562065966" blue="0.17707914595889679" alpha="1" colorSpace="calibratedRGB"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="640х960 Apple iPhone 4-4S - приветствие-2" translatesAutoresizingMaskIntoConstraints="NO" id="xEd-dL-xhT">
+                    <rect key="frame" x="0.0" y="0.0" width="537" height="480"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="BzP-eF-E2c" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="LcC-dp-0yK"/>
-                <constraint firstAttribute="bottom" secondItem="BzP-eF-E2c" secondAttribute="bottom" id="XVn-bb-ifI"/>
-                <constraint firstAttribute="trailing" secondItem="BzP-eF-E2c" secondAttribute="trailing" id="h7n-tq-uBI"/>
-                <constraint firstItem="BzP-eF-E2c" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="lhH-al-jbM"/>
+                <constraint firstItem="xEd-dL-xhT" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="M2o-6I-Jn0"/>
+                <constraint firstAttribute="bottom" secondItem="xEd-dL-xhT" secondAttribute="bottom" id="ePo-XX-i63"/>
+                <constraint firstItem="xEd-dL-xhT" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="gZ4-AQ-2f2"/>
+                <constraint firstAttribute="trailing" secondItem="xEd-dL-xhT" secondAttribute="trailing" id="mUo-Xo-7rO"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="463" y="398"/>
+            <point key="canvasLocation" x="491.5" y="398"/>
         </view>
     </objects>
+    <resources>
+        <image name="640х960 Apple iPhone 4-4S - приветствие-2" width="640" height="960"/>
+    </resources>
 </document>
