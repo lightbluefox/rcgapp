@@ -13,15 +13,18 @@ class NewsFeedTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-
+        self.tabBarController?.tabBar.barTintColor = UIColor(red: 204/255, green: 0, blue: 0, alpha: 1);
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 204/255, green: 0, blue: 0, alpha: 1);
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        
+        let navBarFont = UIFont(name: "Roboto-Regular", size: 17.0) ?? UIFont.systemFontOfSize(17);
+        
+        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: navBarFont, NSForegroundColorAttributeName:UIColor.whiteColor()]
+        
         self.title = "ЛЕНТА НОВОСТЕЙ И ВАКАНСИЙ"
     }
 
