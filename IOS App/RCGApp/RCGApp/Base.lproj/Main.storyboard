@@ -106,7 +106,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gXK-5b-FuI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1599" y="-817"/>
+            <point key="canvasLocation" x="787" y="-667"/>
         </scene>
         <!--Vacancy Respond Form View Controller-->
         <scene sceneID="n9N-Ia-WHd">
@@ -124,7 +124,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CNk-Eg-oQ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2292" y="-803"/>
+            <point key="canvasLocation" x="1502" y="-667"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">

@@ -14,12 +14,6 @@ class ContactUsViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.tabBarController?.tabBar.barTintColor = UIColor(red: 204/255, green: 0, blue: 0, alpha: 1);
-        self.navigationController?.navigationBar.barTintColor = UIColor(red: 204/255, green: 0, blue: 0, alpha: 1);
-
-        let navBarFont = UIFont(name: "Roboto-Regular", size: 17.0) ?? UIFont.systemFontOfSize(17);
-
-        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: navBarFont, NSForegroundColorAttributeName:UIColor.whiteColor()]
         self.title = "ОБРАТНАЯ СВЯЗЬ"
     }
 

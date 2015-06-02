@@ -18,6 +18,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true);
         
+        let navBarFont = UIFont(name: "Roboto-Regular", size: 17.0) ?? UIFont.systemFontOfSize(17.0);
+        
+        var navBar = UINavigationBar.appearance();
+        var tabBar = UITabBar.appearance();
+        
+        if (floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_6_1) //Для iOS 7 и старше
+        {
+            navBar.barTintColor = UIColor(red: 194/255, green: 0, blue: 18/255, alpha: 1);
+            tabBar.barTintColor = UIColor(red: 194/255, green: 0, blue: 18/255, alpha: 1);
+        }
+        else //ниже iOS 7
+        {
+            navBar.tintColor = UIColor(red: 194/255, green: 0, blue: 18/255, alpha: 1);
+            tabBar.tintColor = UIColor(red: 194/255, green: 0, blue: 18/255, alpha: 1);
+        }
+        //Стиль заголовка
+        navBar.titleTextAttributes = [NSFontAttributeName: navBarFont, NSForegroundColorAttributeName: UIColor.whiteColor()];
         return true
     }
 
