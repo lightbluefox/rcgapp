@@ -12,29 +12,40 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true);
         
+        var itemsReceiver = NewsAndVacanciesReceiver()
+        //itemsReceiver.getAllNews();
+        //itemsReceiver.getAllVacancies();
+        var newsStack = itemsReceiver.newsStack;
+        var vacStack = itemsReceiver.vacStack
+        
+        
         let navBarFont = UIFont(name: "Roboto-Regular", size: 17.0) ?? UIFont.systemFontOfSize(17.0);
         
         var navBar = UINavigationBar.appearance();
         var tabBar = UITabBar.appearance();
-        
+           
+        UITabBar.appearance().backgroundImage = UIImage(named: "selectedItemImage");
+
         if (floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_6_1) //Для iOS 7 и старше
         {
-            navBar.barTintColor = UIColor(red: 194/255, green: 0, blue: 18/255, alpha: 1);
-            tabBar.barTintColor = UIColor(red: 194/255, green: 0, blue: 18/255, alpha: 1);
+            navBar.barTintColor = UIColor(red: 194/255, green: 0, blue: 18/255, alpha: 1.0);
+            tabBar.barTintColor = UIColor(red: 194/255, green: 0, blue: 18/255, alpha: 1.0);
         }
         else //ниже iOS 7
         {
-            navBar.tintColor = UIColor(red: 194/255, green: 0, blue: 18/255, alpha: 1);
-            tabBar.tintColor = UIColor(red: 194/255, green: 0, blue: 18/255, alpha: 1);
+            navBar.tintColor = UIColor(red: 194/255, green: 0, blue: 18/255, alpha: 1.0);
+            tabBar.tintColor = UIColor(red: 194/255, green: 0, blue: 18/255, alpha: 1.0);
         }
         //Стиль заголовка
         navBar.titleTextAttributes = [NSFontAttributeName: navBarFont, NSForegroundColorAttributeName: UIColor.whiteColor()];
+        tabBar.tintColor = UIColor.whiteColor();
+        tabBar.selectionIndicatorImage = UIImage(named: "selectedItemImage");
+        
         return true
     }
 

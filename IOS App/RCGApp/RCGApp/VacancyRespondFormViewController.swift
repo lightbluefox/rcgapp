@@ -12,10 +12,20 @@ class VacancyRespondFormViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.navigationItem.title = "ОТКЛИК НА ВАКАНСИЮ"
+        let buttonBack: UIButton = UIButton.buttonWithType(.Custom) as UIButton;
+        buttonBack.frame = CGRectMake(0, 0, 40, 40);
+        buttonBack.setImage(UIImage(named: "backButton"), forState: .Normal);
+        buttonBack.addTarget(self, action: "leftNavButtonClick:", forControlEvents: UIControlEvents.TouchUpInside);
+        var leftBarButtonItem: UIBarButtonItem = UIBarButtonItem(customView: buttonBack);
+        self.navigationItem.setLeftBarButtonItem(leftBarButtonItem, animated: false);
         // Do any additional setup after loading the view.
     }
-
+    func leftNavButtonClick(sender: UIButton!)
+    {
+        self.navigationController?.popViewControllerAnimated(true)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

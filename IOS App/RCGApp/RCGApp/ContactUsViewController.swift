@@ -14,7 +14,10 @@ class ContactUsViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.title = "ОБРАТНАЯ СВЯЗЬ"
+        self.navigationItem.title = "ОБРАТНАЯ СВЯЗЬ"
+        self.navigationController?.navigationBar.translucent = false;
+        
+        
     }
 
     override func didReceiveMemoryWarning() {

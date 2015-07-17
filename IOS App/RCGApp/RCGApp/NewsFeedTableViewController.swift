@@ -8,19 +8,58 @@
 
 import UIKit
 
-class NewsFeedTableViewController: UITableViewController {
+class NewsFeedTableViewController: UITableViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet var newsFeedTableView: UITableView!
+    var itemsReceiver = NewsAndVacanciesReceiver()
+    //var refreshControll: UIRefreshControl!;
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Получение всех новостей
+        itemsReceiver.getAllNews();
         
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+        //Описываем пул-ту-рефреш
+        self.refreshControl = UIRefreshControl();
+        self.refreshControl?.attributedTitle = NSAttributedString(string: "Потяните вниз, чтобы обновить");
+        self.refreshControl?.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
+        //self.tableView.addSubview(self.refreshControl!);
+        
+        //Убираем прозрачность таббара и навбара
+        self.navigationItem.title = "НОВОСТИ";
+        self.navigationController?.navigationBar.translucent = false;
+        self.tabBarController?.tabBar.translucent = false;
+        
+        //Задаем иконки в таббаре
+        let tabBar = self.tabBarController?.tabBar;
+        
+        tabBar?.tintColor = UIColor.whiteColor();
+        let tabItems = tabBar?.items;
+        let tabItem0 = tabItems![0] as UITabBarItem;
+        tabItem0.image = UIImage(named:"NewsFeed")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal);
+        tabItem0.selectedImage = UIImage(named:"NewsFeed")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal);
+        
+        let tabItem1 = tabItems![1] as UITabBarItem;
+        tabItem1.image = UIImage(named:"VacFeed")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal);
+        tabItem1.selectedImage = UIImage(named:"VacFeed")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal);
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        let tabItem2 = tabItems![2] as UITabBarItem;
+        tabItem2.image = UIImage(named:"ContactUs")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal);
+        tabItem2.selectedImage = UIImage(named:"ContactUsSelected3")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal);
         
-         
-        self.title = "ЛЕНТА НОВОСТЕЙ И ВАКАНСИЙ"
+        
+        self.newsFeedTableView.rowHeight = 80;
+        
+        
+    }
+    func refresh(sender:AnyObject) {
+        itemsReceiver.getAllNews();
+        newsFeedTableView.reloadData();
+        self.refreshControl?.endRefreshing();
+    }
+    override func viewWillAppear(animated: Bool) {
+        newsFeedTableView.reloadData();
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,71 +69,49 @@ class NewsFeedTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    //override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
-        return 0
-    }
+    //    return 0
+    //}
+    
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 0
+        //println(itemsReceiver.newsStack.count);
+        return itemsReceiver.newsStack.count
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell
-
+        //let cell = tableView.dequeueReusableCellWithIdentifier("NewsCell", forIndexPath: indexPath) as NewsCellViewController
+        let cell = self.newsFeedTableView.dequeueReusableCellWithIdentifier("NewsCell") as NewsCellViewController
         // Configure the cell...
-
+        let currentNews = itemsReceiver.newsStack[indexPath.row];
+        
+        cell.cellTitle?.text = currentNews.title
+        cell.cellAnnounce?.text = currentNews.announcement;
+        cell.cellDate?.text = currentNews.createdDate;
         return cell
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return NO if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return NO if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using [segue destinationViewController].
+        var newsViewController =  segue.destinationViewController as NewsViewController
+    //sender is a tapped NewsCellViewController
+        let cell = sender as NewsCellViewController
+        
+        var indexPath = self.newsFeedTableView.indexPathForCell(cell);
+        
+        let currentNews = self.itemsReceiver.newsStack[indexPath!.row];
+        newsViewController.heading = currentNews.title;
+        newsViewController.announcement = currentNews.announcement;
+        newsViewController.fullText = currentNews.fullText;
+        newsViewController.createdDate = currentNews.createdDate;
+        newsViewController.image = currentNews.fullTextImage;
+
     }
-    */
 
 }

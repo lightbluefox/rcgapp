@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		8416D62A1B01CBF3005A8F05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8416D6291B01CBF3005A8F05 /* AppDelegate.swift */; };
 		8416D62E1B01CBF3005A8F05 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8416D62D1B01CBF3005A8F05 /* NewsViewController.swift */; };
-		8416D6311B01CBF3005A8F05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8416D62F1B01CBF3005A8F05 /* Main.storyboard */; };
 		8416D6331B01CBF3005A8F05 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8416D6321B01CBF3005A8F05 /* Images.xcassets */; };
 		8416D6361B01CBF3005A8F05 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8416D6341B01CBF3005A8F05 /* LaunchScreen.xib */; };
 		8416D6421B01CBF3005A8F05 /* RCGAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8416D6411B01CBF3005A8F05 /* RCGAppTests.swift */; };
@@ -19,7 +18,15 @@
 		8449A2B31B1DFAA9003D0E65 /* roboto-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8449A2B21B1DFAA9003D0E65 /* roboto-regular.ttf */; };
 		8449A2B41B1E01B6003D0E65 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8416D6281B01CBF3005A8F05 /* Info.plist */; };
 		8449A2B61B1E0DF4003D0E65 /* roboto-light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8449A2B51B1E0DF4003D0E65 /* roboto-light.ttf */; };
+		844E135F1B511BA1001318C3 /* VacancyCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844E135E1B511BA1001318C3 /* VacancyCellViewController.swift */; };
+		846B85FD1B2DFA3700A8C7B9 /* VacancyFeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B85FC1B2DFA3700A8C7B9 /* VacancyFeedTableViewController.swift */; };
 		8483ADE61B1CC51E00EB7544 /* NewsFeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8483ADE51B1CC51E00EB7544 /* NewsFeedTableViewController.swift */; };
+		8484B1151B58D12100649609 /* RCGButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8484B1141B58D12100649609 /* RCGButton.swift */; };
+		8484B1181B5966C600649609 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8484B1161B5966C600649609 /* Main.storyboard */; };
+		84A59E6E1B443FC7004DD721 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A59E6D1B443FC7004DD721 /* UIImageExtensions.swift */; };
+		84C558BF1B3449D5009A14FC /* NewsAndVacancies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C558BE1B3449D5009A14FC /* NewsAndVacancies.swift */; };
+		84C558C31B35E47C009A14FC /* NewsCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C558C21B35E47C009A14FC /* NewsCellViewController.swift */; };
+		84D4AF291B4C7B7E003889D9 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D4AF281B4C7B7E003889D9 /* SwiftyJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +44,6 @@
 		8416D6281B01CBF3005A8F05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8416D6291B01CBF3005A8F05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8416D62D1B01CBF3005A8F05 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
-		8416D6301B01CBF3005A8F05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8416D6321B01CBF3005A8F05 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8416D6351B01CBF3005A8F05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		8416D63B1B01CBF3005A8F05 /* RCGAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RCGAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,7 +54,18 @@
 		8416D64F1B023DA4005A8F05 /* VacancyRespondFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VacancyRespondFormViewController.swift; sourceTree = "<group>"; };
 		8449A2B21B1DFAA9003D0E65 /* roboto-regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "roboto-regular.ttf"; path = "../../../roboto-regular.ttf"; sourceTree = "<group>"; };
 		8449A2B51B1E0DF4003D0E65 /* roboto-light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "roboto-light.ttf"; sourceTree = "<group>"; };
+		844E135E1B511BA1001318C3 /* VacancyCellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VacancyCellViewController.swift; sourceTree = "<group>"; };
+		846B85FC1B2DFA3700A8C7B9 /* VacancyFeedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VacancyFeedTableViewController.swift; sourceTree = "<group>"; };
 		8483ADE51B1CC51E00EB7544 /* NewsFeedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsFeedTableViewController.swift; sourceTree = "<group>"; };
+		8484B1141B58D12100649609 /* RCGButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RCGButton.swift; sourceTree = "<group>"; };
+		8484B1171B5966C600649609 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		849F4B801B550DF000145648 /* RobotoBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RobotoBold.ttf; sourceTree = "<group>"; };
+		849F4B811B550DF000145648 /* RobotoMedium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RobotoMedium.ttf; sourceTree = "<group>"; };
+		84A59E6D1B443FC7004DD721 /* UIImageExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIImageExtensions.swift; path = ../UIImageExtensions.swift; sourceTree = "<group>"; };
+		84C558BE1B3449D5009A14FC /* NewsAndVacancies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsAndVacancies.swift; sourceTree = "<group>"; };
+		84C558C21B35E47C009A14FC /* NewsCellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCellViewController.swift; sourceTree = "<group>"; };
+		84D4AF281B4C7B7E003889D9 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		84D4AF2A1B4C7B9B003889D9 /* SwiftyJSON.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftyJSON.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +89,7 @@
 		8416D61B1B01CBF3005A8F05 = {
 			isa = PBXGroup;
 			children = (
+				8484B1141B58D12100649609 /* RCGButton.swift */,
 				8416D6261B01CBF3005A8F05 /* RCGApp */,
 				8416D63E1B01CBF3005A8F05 /* RCGAppTests */,
 				8416D6251B01CBF3005A8F05 /* Products */,
@@ -90,14 +108,20 @@
 		8416D6261B01CBF3005A8F05 /* RCGApp */ = {
 			isa = PBXGroup;
 			children = (
+				84D4AF0F1B4C745A003889D9 /* JSON */,
+				84A59E6D1B443FC7004DD721 /* UIImageExtensions.swift */,
 				8449A2B11B1DFA8F003D0E65 /* Resources */,
 				8416D6291B01CBF3005A8F05 /* AppDelegate.swift */,
 				8483ADE51B1CC51E00EB7544 /* NewsFeedTableViewController.swift */,
-				8416D64D1B023D5C005A8F05 /* ContactUsViewController.swift */,
+				84C558C21B35E47C009A14FC /* NewsCellViewController.swift */,
 				8416D62D1B01CBF3005A8F05 /* NewsViewController.swift */,
+				84C558BE1B3449D5009A14FC /* NewsAndVacancies.swift */,
+				846B85FC1B2DFA3700A8C7B9 /* VacancyFeedTableViewController.swift */,
+				844E135E1B511BA1001318C3 /* VacancyCellViewController.swift */,
 				8416D64B1B023C5E005A8F05 /* VacancyViewController.swift */,
 				8416D64F1B023DA4005A8F05 /* VacancyRespondFormViewController.swift */,
-				8416D62F1B01CBF3005A8F05 /* Main.storyboard */,
+				8416D64D1B023D5C005A8F05 /* ContactUsViewController.swift */,
+				8484B1161B5966C600649609 /* Main.storyboard */,
 				8416D6321B01CBF3005A8F05 /* Images.xcassets */,
 				8416D6341B01CBF3005A8F05 /* LaunchScreen.xib */,
 				8416D6271B01CBF3005A8F05 /* Supporting Files */,
@@ -134,9 +158,20 @@
 			isa = PBXGroup;
 			children = (
 				8449A2B51B1E0DF4003D0E65 /* roboto-light.ttf */,
+				849F4B801B550DF000145648 /* RobotoBold.ttf */,
+				849F4B811B550DF000145648 /* RobotoMedium.ttf */,
 				8449A2B21B1DFAA9003D0E65 /* roboto-regular.ttf */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		84D4AF0F1B4C745A003889D9 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				84D4AF281B4C7B7E003889D9 /* SwiftyJSON.swift */,
+				84D4AF2A1B4C7B9B003889D9 /* SwiftyJSON.h */,
+			);
+			name = JSON;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,10 +254,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8416D6311B01CBF3005A8F05 /* Main.storyboard in Resources */,
 				8416D6361B01CBF3005A8F05 /* LaunchScreen.xib in Resources */,
 				8449A2B61B1E0DF4003D0E65 /* roboto-light.ttf in Resources */,
 				8449A2B31B1DFAA9003D0E65 /* roboto-regular.ttf in Resources */,
+				8484B1181B5966C600649609 /* Main.storyboard in Resources */,
 				8449A2B41B1E01B6003D0E65 /* Info.plist in Resources */,
 				8416D6331B01CBF3005A8F05 /* Images.xcassets in Resources */,
 			);
@@ -244,9 +279,16 @@
 			files = (
 				8416D62E1B01CBF3005A8F05 /* NewsViewController.swift in Sources */,
 				8416D62A1B01CBF3005A8F05 /* AppDelegate.swift in Sources */,
+				8484B1151B58D12100649609 /* RCGButton.swift in Sources */,
+				844E135F1B511BA1001318C3 /* VacancyCellViewController.swift in Sources */,
 				8416D6501B023DA4005A8F05 /* VacancyRespondFormViewController.swift in Sources */,
+				84D4AF291B4C7B7E003889D9 /* SwiftyJSON.swift in Sources */,
 				8416D64E1B023D5C005A8F05 /* ContactUsViewController.swift in Sources */,
+				846B85FD1B2DFA3700A8C7B9 /* VacancyFeedTableViewController.swift in Sources */,
+				84C558C31B35E47C009A14FC /* NewsCellViewController.swift in Sources */,
 				8483ADE61B1CC51E00EB7544 /* NewsFeedTableViewController.swift in Sources */,
+				84A59E6E1B443FC7004DD721 /* UIImageExtensions.swift in Sources */,
+				84C558BF1B3449D5009A14FC /* NewsAndVacancies.swift in Sources */,
 				8416D64C1B023C5E005A8F05 /* VacancyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,20 +312,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		8416D62F1B01CBF3005A8F05 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8416D6301B01CBF3005A8F05 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8416D6341B01CBF3005A8F05 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				8416D6351B01CBF3005A8F05 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		8484B1161B5966C600649609 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8484B1171B5966C600649609 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -370,7 +412,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = RCGApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -380,7 +424,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = RCGApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

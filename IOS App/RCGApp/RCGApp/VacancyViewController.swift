@@ -10,12 +10,55 @@ import UIKit
 
 class VacancyViewController: UIViewController {
 
+    var fullTextImage: UIImage!
+    var maleImg: UIImage!
+    var femaleImg: UIImage!
+    var createdDate: String?
+    var heading: String?
+    var announcement: String?
+    var fullText: String?
+    var rate: String?
+    
+    @IBOutlet weak var vacancyScrollView: UIScrollView!
+    
+    @IBAction func vacancyRespondButton(sender: AnyObject) {
+    }
+    @IBOutlet weak var vacancyFullTextImage: UIImageView!
+    @IBOutlet weak var vacancyMaleImg: UIImageView!
+    @IBOutlet weak var vacancyFemaleImg: UIImageView!
+    @IBOutlet weak var vacancyCreatedDate: UILabel!
+    @IBOutlet weak var vacancyTitle: UILabel!
+    @IBOutlet weak var vacancyAnnouncement: UILabel!
+    @IBOutlet weak var vacancyRate: UILabel!
+    @IBOutlet weak var vacancyFullText: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        self.navigationItem.title = "ВАКАНСИЯ"
+        let buttonBack: UIButton = UIButton.buttonWithType(.Custom) as UIButton;
+        buttonBack.frame = CGRectMake(0, 0, 40, 40);
+        buttonBack.setImage(UIImage(named: "backButton"), forState: .Normal);
+        buttonBack.addTarget(self, action: "leftNavButtonClick:", forControlEvents: UIControlEvents.TouchUpInside);
+        var leftBarButtonItem: UIBarButtonItem = UIBarButtonItem(customView: buttonBack);
+        self.navigationItem.setLeftBarButtonItem(leftBarButtonItem, animated: false);
+        
+        vacancyTitle.text = heading!
+        vacancyAnnouncement.text = announcement!
+        vacancyFullTextImage.image = fullTextImage.rounded;
+        vacancyMaleImg.image = maleImg;
+        vacancyFemaleImg.image = femaleImg;
+        vacancyCreatedDate.text = createdDate;
+        vacancyRate.text = rate;
+        vacancyFullText.text = fullText;
+        
+        
+    
     }
-
+    func leftNavButtonClick(sender: UIButton!)
+    {
+        self.navigationController?.popViewControllerAnimated(true)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
