@@ -29,12 +29,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var navBar = UINavigationBar.appearance();
         var tabBar = UITabBar.appearance();
            
-        UITabBar.appearance().backgroundImage = UIImage(named: "selectedItemImage");
+        //UITabBar.appearance().backgroundImage = UIImage(named: "selectedItemImage");
 
         if (floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_6_1) //Для iOS 7 и старше
         {
             navBar.barTintColor = UIColor(red: 194/255, green: 0, blue: 18/255, alpha: 1.0);
             tabBar.barTintColor = UIColor(red: 194/255, green: 0, blue: 18/255, alpha: 1.0);
+            tabBar.tintColor = UIColor.whiteColor();
         }
         else //ниже iOS 7
         {
@@ -43,7 +44,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         //Стиль заголовка
         navBar.titleTextAttributes = [NSFontAttributeName: navBarFont, NSForegroundColorAttributeName: UIColor.whiteColor()];
-        tabBar.tintColor = UIColor.whiteColor();
+        
+        //Чтобы избавиться от стандартного выделения выбранного таба, используем такой костыль.
         tabBar.selectionIndicatorImage = UIImage(named: "selectedItemImage");
         
         

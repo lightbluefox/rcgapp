@@ -50,6 +50,7 @@
 		84CF31161B8C92F80026F81D /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CF31041B8C92F80026F81D /* UIImageView+HighlightedWebCache.m */; };
 		84CF31171B8C92F80026F81D /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CF31061B8C92F80026F81D /* UIImageView+WebCache.m */; };
 		84CF31181B8C92F80026F81D /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CF31081B8C92F80026F81D /* UIView+WebCacheOperation.m */; };
+		84CF31201B8CFC870026F81D /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CF311F1B8CFC870026F81D /* MBProgressHUD.m */; };
 		84D4AF291B4C7B7E003889D9 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D4AF281B4C7B7E003889D9 /* SwiftyJSON.swift */; };
 /* End PBXBuildFile section */
 
@@ -130,6 +131,8 @@
 		84CF31061B8C92F80026F81D /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		84CF31071B8C92F80026F81D /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		84CF31081B8C92F80026F81D /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
+		84CF311E1B8CFC870026F81D /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		84CF311F1B8CFC870026F81D /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		84D4AF281B4C7B7E003889D9 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		84D4AF2A1B4C7B9B003889D9 /* SwiftyJSON.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftyJSON.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -175,6 +178,7 @@
 		8416D6261B01CBF3005A8F05 /* RCGApp */ = {
 			isa = PBXGroup;
 			children = (
+				84CF311D1B8CFC870026F81D /* MBProgressHUD */,
 				84CF30E71B8C92F80026F81D /* SDWebImage */,
 				84D4AF0F1B4C745A003889D9 /* JSON */,
 				844F74F11B814F4100D923F2 /* SwiftHTTP */,
@@ -287,6 +291,15 @@
 				84CF31081B8C92F80026F81D /* UIView+WebCacheOperation.m */,
 			);
 			path = SDWebImage;
+			sourceTree = "<group>";
+		};
+		84CF311D1B8CFC870026F81D /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				84CF311E1B8CFC870026F81D /* MBProgressHUD.h */,
+				84CF311F1B8CFC870026F81D /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
 		84D4AF0F1B4C745A003889D9 /* JSON */ = {
@@ -408,6 +421,7 @@
 				8416D62A1B01CBF3005A8F05 /* AppDelegate.swift in Sources */,
 				8484B1151B58D12100649609 /* RCGButton.swift in Sources */,
 				844E135F1B511BA1001318C3 /* VacancyCellViewController.swift in Sources */,
+				84CF31201B8CFC870026F81D /* MBProgressHUD.m in Sources */,
 				8416D6501B023DA4005A8F05 /* VacancyRespondFormViewController.swift in Sources */,
 				84CF310C1B8C92F80026F81D /* SDWebImageCompat.m in Sources */,
 				84CF310B1B8C92F80026F81D /* SDImageCache.m in Sources */,

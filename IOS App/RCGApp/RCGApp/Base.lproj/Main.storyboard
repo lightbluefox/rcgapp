@@ -388,7 +388,7 @@
         <scene sceneID="sfT-s7-1C2">
             <objects>
                 <navigationController id="ics-0n-pBd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="VacFeed" id="V1H-25-6Mc">
+                    <tabBarItem key="tabBarItem" title="" image="VacFeed" selectedImage="VacFeed" id="V1H-25-6Mc">
                         <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="UrF-P4-iWB">
@@ -1015,11 +1015,6 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ESq-US-uP9" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="NewsFeed" id="qci-E3-jR9">
                         <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
-                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6qi-iO-Ejx">
@@ -1039,11 +1034,8 @@
         <scene sceneID="qNM-Ea-PMM">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7OD-QI-76i" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="ContactUs" id="dfq-gU-ZvP">
+                    <tabBarItem key="tabBarItem" title="" image="ContactUs" selectedImage="ContactUsSelected3" id="dfq-gU-ZvP">
                         <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="ContactUsSelected3"/>
-                        </userDefinedRuntimeAttributes>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="FJc-dy-UdT">

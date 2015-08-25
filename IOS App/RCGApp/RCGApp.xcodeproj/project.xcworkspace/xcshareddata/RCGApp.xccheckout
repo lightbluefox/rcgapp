@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>E6CFC07C-F2B1-483E-B232-3736931E5245</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>RCGApp</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>5469B383D7081644B9901106A3A8E78E405F082B</key>
 		<string>https://github.com/lightbluefox/rcgapp.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>IOS App/RCGApp/RCGApp.xcodeproj/project.xcworkspace</string>
+	<string>IOS App/RCGApp/RCGApp.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>5469B383D7081644B9901106A3A8E78E405F082B</key>

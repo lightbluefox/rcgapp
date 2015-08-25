@@ -50,39 +50,72 @@ class NewsAndVacanciesReceiver {
     var newsStack = [News]();
     var vacStack = [Vacancy]();
     
-    func getAllNews() {
+    func getAllNews(completionHandlerNews: (result: String) -> Void) {
         newsStack.removeAll(keepCapacity: false);
-        let url = NSURL(string: "http://agency.cloudapp.net/news");
-        let request = NSURLRequest(URL: url!);
-        //var response = NSURLResponse?();
-        var response = AutoreleasingUnsafeMutablePointer<NSURLResponse?>()
-        var error = NSErrorPointer();
-        var data = NSURLConnection.sendSynchronousRequest(request, returningResponse: response, error: error);
-        if (data != nil)
-        {
-            let requestedData = NSString(data: data!, encoding: NSUTF8StringEncoding)
-            let requestedDataUnwrapped = requestedData!;
-            let jsonString = requestedDataUnwrapped;
-            let jsonData = jsonString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: true)
-            let jsonObject: AnyObject! = NSJSONSerialization.JSONObjectWithData(jsonData!, options: NSJSONReadingOptions(0), error: nil)
-            
-            let json = JSON(jsonObject);
-            for var i = 0; i < json.count; i++ {
-                
-                //меняем формат даты
-                
-                var id = json[i]["id"] != nil ? json[i]["id"].int! : 0;
-                var title =  json[i]["title"] != nil ? json[i]["title"].string! : "";
-                var announcement = json[i]["shortText"] != nil ? json[i]["shortText"].string! : "";
-                var fulltext = json[i]["text"] != nil ? json[i]["text"].string! : "";
-           //
-                var fullTextImageURL = json[i]["picture"] != nil ? json[i]["picture"].string! : "";
-            //
-                var createdDate = json[i]["dateCreated"] != nil ? json[i]["dateCreated"].string!.formatedDate : "";
-                
-                newsStack.append(News(id: id, title: title, announcement: announcement, fulltext: fulltext, fullTextImageURL: fullTextImageURL, createdDate: createdDate));
+        
+        var request = HTTPTask()
+        request.GET("http://agency.cloudapp.net/news", parameters: nil, completionHandler: {(response: HTTPResponse) in
+            if let err = response.error {
+                println("error: \(err.localizedDescription)")
+                return //also notify app of failure as needed
             }
-        }
+            if let data = response.responseObject as? NSData {
+                let requestedData = NSString(data: data, encoding: NSUTF8StringEncoding)
+                let requestedDataUnwrapped = requestedData!;
+                let jsonString = requestedDataUnwrapped;
+                let jsonData = jsonString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: true)
+                let jsonObject: AnyObject! = NSJSONSerialization.JSONObjectWithData(jsonData!, options: NSJSONReadingOptions(0), error: nil)
+    
+                let json = JSON(jsonObject);
+                for var i = 0; i < json.count; i++ {
+    
+    
+                    var id = json[i]["id"] != nil ? json[i]["id"].int! : 0;
+                    var title =  json[i]["title"] != nil ? json[i]["title"].string! : "";
+                    var announcement = json[i]["shortText"] != nil ? json[i]["shortText"].string! : "";
+                    var fulltext = json[i]["text"] != nil ? json[i]["text"].string! : "";
+               //
+                    var fullTextImageURL = json[i]["picture"] != nil ? json[i]["picture"].string! : "";
+                //
+                    var createdDate = json[i]["dateCreated"] != nil ? json[i]["dateCreated"].string!.formatedDate : "";
+                    
+                    self.newsStack.append(News(id: id, title: title, announcement: announcement, fulltext: fulltext, fullTextImageURL: fullTextImageURL, createdDate: createdDate));
+                }
+                completionHandlerNews(result: "Success")
+
+            }
+        })
+//        let url = NSURL(string: "http://agency.cloudapp.net/news");
+//        let request = NSURLRequest(URL: url!);
+//        //var response = NSURLResponse?();
+//        var response = AutoreleasingUnsafeMutablePointer<NSURLResponse?>()
+//        var error = NSErrorPointer();
+//        var data = NSURLConnection.sendSynchronousRequest(request, returningResponse: response, error: error);
+//        if (data != nil)
+//        {
+//            let requestedData = NSString(data: data!, encoding: NSUTF8StringEncoding)
+//            let requestedDataUnwrapped = requestedData!;
+//            let jsonString = requestedDataUnwrapped;
+//            let jsonData = jsonString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: true)
+//            let jsonObject: AnyObject! = NSJSONSerialization.JSONObjectWithData(jsonData!, options: NSJSONReadingOptions(0), error: nil)
+//            
+//            let json = JSON(jsonObject);
+//            for var i = 0; i < json.count; i++ {
+//                
+//                //меняем формат даты
+//                
+//                var id = json[i]["id"] != nil ? json[i]["id"].int! : 0;
+//                var title =  json[i]["title"] != nil ? json[i]["title"].string! : "";
+//                var announcement = json[i]["shortText"] != nil ? json[i]["shortText"].string! : "";
+//                var fulltext = json[i]["text"] != nil ? json[i]["text"].string! : "";
+//           //
+//                var fullTextImageURL = json[i]["picture"] != nil ? json[i]["picture"].string! : "";
+//            //
+//                var createdDate = json[i]["dateCreated"] != nil ? json[i]["dateCreated"].string!.formatedDate : "";
+//                
+//                newsStack.append(News(id: id, title: title, announcement: announcement, fulltext: fulltext, fullTextImageURL: fullTextImageURL, createdDate: createdDate));
+//            }
+//        }
         
 //        
 //        newsStack.append(News(id: 55, title: "Узурпатор наказан", announcement: "Сегодня был наказан узурпатор Ренли Баратеон", fulltext: "Ренли Баратеон, претендовавший на трон после загадочной смерти его брата Роберта Баратеона, был убит своим личным гвардейцем Радужных Плащей, неказистой женщиной, Бриеной Тарт. Сама Бриена причастность к смерти наследника престола отрицает, и утверждает, что Ренли убила тень с лицом старшего брата Роберта - Станниса Баратеона.", fulltextImage: UIImage(named: "FullTextImage")!, createdDate: "20.07.2015"));
