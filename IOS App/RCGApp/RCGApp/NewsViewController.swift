@@ -10,12 +10,11 @@ import UIKit
 
 class NewsViewController: UIViewController {
     
-    var image: UIImage!
+    var imageURL: String?
     var createdDate: String?
     var heading: String?
     var announcement: String?
     var fullText: String?
-    
     
     @IBOutlet weak var newsImage: UIImageView!
     @IBOutlet weak var newsCreatedDate: UILabel!
@@ -29,14 +28,24 @@ class NewsViewController: UIViewController {
         newsTitle.text = heading!
         newsAnnouncement.text = announcement!;
         newsFullText.text = fullText!;
-        newsImage.image = UIImage(named: "FullTextImage")!.rounded;
+        if (imageURL != nil) || (imageURL != "")
+        {
+            newsImage.sd_setImageWithURL(NSURL(string: imageURL!))
+            newsImage.layer.cornerRadius = 5.0
+            newsImage.layer.masksToBounds = true
+            //newsImage.image
+        }
+        
+    
+        
+        
         newsCreatedDate.text = createdDate!;
         
         self.navigationItem.title = "НОВОСТЬ"
         self.navigationItem.leftBarButtonItem = nil;
         self.navigationItem.hidesBackButton = true;
         
-        let buttonBack: UIButton = UIButton.buttonWithType(.Custom) as UIButton;
+        let buttonBack: UIButton = UIButton.buttonWithType(.Custom) as! UIButton;
         buttonBack.frame = CGRectMake(0, 0, 40, 40);
         buttonBack.setImage(UIImage(named: "backButton"), forState: .Normal);
         buttonBack.addTarget(self, action: "leftNavButtonClick:", forControlEvents: UIControlEvents.TouchUpInside);

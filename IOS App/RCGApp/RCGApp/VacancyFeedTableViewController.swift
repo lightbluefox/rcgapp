@@ -52,13 +52,23 @@ class VacancyFeedTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         //let cell = tableView.dequeueReusableCellWithIdentifier("NewsCell", forIndexPath: indexPath) as NewsCellViewController
-        let cell = self.vacancyFeedView.dequeueReusableCellWithIdentifier("VacancyCell") as VacancyCellViewController
+        let cell = self.vacancyFeedView.dequeueReusableCellWithIdentifier("VacancyCell") as! VacancyCellViewController
         // Configure the cell...
         let currentVac = itemsReceiver.vacStack[indexPath.row];
         
         cell.cellVacTitle?.text = currentVac.title;
         cell.cellVacDate?.text = currentVac.createdDate;
-        cell.cellVacAnnounceImage?.image = currentVac.announceImage;
+        if currentVac.announceImageURL != ""
+        {
+            cell.cellVacAnnounceImage.sd_setImageWithURL(NSURL(string: currentVac.announceImageURL))
+            cell.cellVacAnnounceImage.image?.rounded
+        }
+        else
+        {
+            cell.cellVacAnnounceImage.image = UIImage(named: "FullTextImage")!
+            cell.cellVacAnnounceImage.image?.rounded
+        }
+        
         switch currentVac.gender {
         case 0 : cell.cellVacFemaleImage?.image = UIImage(named: "femaleRed"); cell.cellVacMaleImage?.image = UIImage(named: "maleGray");
         case 1 : cell.cellVacFemaleImage?.image = UIImage(named: "femaleGray"); cell.cellVacMaleImage?.image = UIImage(named: "maleRed");
@@ -120,18 +130,19 @@ class VacancyFeedTableViewController: UITableViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using [segue destinationViewController].
-        var vacancyViewController = segue.destinationViewController as VacancyViewController
+        var vacancyViewController = segue.destinationViewController as! VacancyViewController
         // Pass the selected object to the new view controller.
-        let cell = sender as VacancyCellViewController
+        let cell = sender as! VacancyCellViewController
         
         var indexPath = self.vacancyFeedView.indexPathForCell(cell)
         let currentVac = self.itemsReceiver.vacStack[indexPath!.row]
-        vacancyViewController.fullTextImage = currentVac.fullTextImage
+        vacancyViewController.fullTextImageURL = currentVac.fullTextImageURL
         vacancyViewController.heading = currentVac.title
         vacancyViewController.announcement = currentVac.announcement
         vacancyViewController.createdDate = currentVac.createdDate
         vacancyViewController.rate = currentVac.rate
         vacancyViewController.fullText = currentVac.fullText
+        vacancyViewController.vacancyId = currentVac.id
         switch currentVac.gender {
         case 0 : vacancyViewController.femaleImg = UIImage(named: "femaleRed"); vacancyViewController.maleImg = UIImage(named: "maleGray");
         case 1 : vacancyViewController.femaleImg = UIImage(named: "femaleGray"); vacancyViewController.maleImg = UIImage(named: "maleRed");

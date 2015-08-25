@@ -46,6 +46,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         tabBar.tintColor = UIColor.whiteColor();
         tabBar.selectionIndicatorImage = UIImage(named: "selectedItemImage");
         
+        
+        //Mark: Регистрация на пуш-уведомления
+        //IOS 7 -
+        UIApplication.sharedApplication().registerForRemoteNotificationTypes(UIRemoteNotificationType.Alert | UIRemoteNotificationType.Badge | UIRemoteNotificationType.Sound);
+        //IOS 8 +
+        //UIApplication.sharedApplication().registerUserNotificationSettings(UIUserNotificationType.Sound | UIUserNotificationType.Badge | UIUserNotificationType.Alert);
+        //UIApplication.sharedApplication().registerUserNotificationSettings(notificationSettings: UIUserNotificationSettings.Sound | UIUserNotificationType.Badge | UIUserNotificationType.Alert)
+        
+        
         return true
     }
 

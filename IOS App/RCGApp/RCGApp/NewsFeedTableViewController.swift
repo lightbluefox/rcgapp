@@ -36,15 +36,15 @@ class NewsFeedTableViewController: UITableViewController, UITableViewDelegate, U
         
         tabBar?.tintColor = UIColor.whiteColor();
         let tabItems = tabBar?.items;
-        let tabItem0 = tabItems![0] as UITabBarItem;
+        let tabItem0 = tabItems![0] as! UITabBarItem;
         tabItem0.image = UIImage(named:"NewsFeed")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal);
         tabItem0.selectedImage = UIImage(named:"NewsFeed")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal);
         
-        let tabItem1 = tabItems![1] as UITabBarItem;
+        let tabItem1 = tabItems![1] as! UITabBarItem;
         tabItem1.image = UIImage(named:"VacFeed")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal);
         tabItem1.selectedImage = UIImage(named:"VacFeed")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal);
 
-        let tabItem2 = tabItems![2] as UITabBarItem;
+        let tabItem2 = tabItems![2] as! UITabBarItem;
         tabItem2.image = UIImage(named:"ContactUs")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal);
         tabItem2.selectedImage = UIImage(named:"ContactUsSelected3")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal);
         
@@ -86,7 +86,7 @@ class NewsFeedTableViewController: UITableViewController, UITableViewDelegate, U
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         //let cell = tableView.dequeueReusableCellWithIdentifier("NewsCell", forIndexPath: indexPath) as NewsCellViewController
-        let cell = self.newsFeedTableView.dequeueReusableCellWithIdentifier("NewsCell") as NewsCellViewController
+        let cell = self.newsFeedTableView.dequeueReusableCellWithIdentifier("NewsCell") as! NewsCellViewController
         // Configure the cell...
         let currentNews = itemsReceiver.newsStack[indexPath.row];
         
@@ -99,9 +99,9 @@ class NewsFeedTableViewController: UITableViewController, UITableViewDelegate, U
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     // Get the new view controller using [segue destinationViewController].
-        var newsViewController =  segue.destinationViewController as NewsViewController
+        var newsViewController =  segue.destinationViewController as! NewsViewController
     //sender is a tapped NewsCellViewController
-        let cell = sender as NewsCellViewController
+        let cell = sender as! NewsCellViewController
         
         var indexPath = self.newsFeedTableView.indexPathForCell(cell);
         
@@ -110,8 +110,7 @@ class NewsFeedTableViewController: UITableViewController, UITableViewDelegate, U
         newsViewController.announcement = currentNews.announcement;
         newsViewController.fullText = currentNews.fullText;
         newsViewController.createdDate = currentNews.createdDate;
-        newsViewController.image = currentNews.fullTextImage;
-
+        newsViewController.imageURL = currentNews.fullTextImageURL;
     }
 
 }

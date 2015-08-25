@@ -31,5 +31,4 @@ extension String {
         var dateShort = dateformatter.stringFromDate(dateObject!);
         return dateShort
     }
-
 }

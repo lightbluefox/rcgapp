@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RCGApp/NewsAndVacancies.swift"
-            timestampString = "458599880.19736"
+            timestampString = "462136027.28407"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
             landmarkName = "getAllNews()"
             landmarkType = "5">
          </BreakpointContent>
@@ -42,39 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RCGApp/NewsAndVacancies.swift"
-            timestampString = "458599880.19736"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
-            landmarkName = "getAllNews()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RCGApp/NewsAndVacancies.swift"
-            timestampString = "458599880.19736"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
-            landmarkName = "getAllNews()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RCGApp/NewsAndVacancies.swift"
-            timestampString = "458599880.19736"
+            timestampString = "462136027.28407"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "61"
@@ -90,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RCGApp/NewsAndVacancies.swift"
-            timestampString = "458599880.19736"
+            timestampString = "462136027.28407"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
             landmarkName = "getAllNews()"
             landmarkType = "5">
          </BreakpointContent>
@@ -106,7 +74,71 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RCGApp/NewsAndVacancies.swift"
-            timestampString = "458599880.19736"
+            timestampString = "462136027.28407"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "getAllNews()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RCGApp/NewsAndVacancies.swift"
+            timestampString = "462136027.28407"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "getAllNews()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RCGApp/NewsAndVacancies.swift"
+            timestampString = "462136027.28407"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "getAllNews()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RCGApp/NewsAndVacancies.swift"
+            timestampString = "462136027.28407"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "getAllNews()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RCGApp/NewsAndVacancies.swift"
+            timestampString = "462136027.28407"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "67"
@@ -122,43 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RCGApp/NewsAndVacancies.swift"
-            timestampString = "458599880.19736"
+            timestampString = "462136027.28407"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
-            landmarkName = "getAllNews()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RCGApp/NewsAndVacancies.swift"
-            timestampString = "458599880.19736"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "getAllNews()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RCGApp/NewsAndVacancies.swift"
-            timestampString = "458599880.19736"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
             landmarkName = "getAllNews()"
             landmarkType = "5">
          </BreakpointContent>
@@ -200,6 +200,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "RCGApp.AppDelegate.application (RCGApp.AppDelegate)(ObjectiveC.UIApplication, didFinishLaunchingWithOptions : Swift.Optional&lt;Swift.Dictionary&lt;ObjectiveC.NSObject, Swift.AnyObject&gt;&gt;) -&gt; Swift.Bool"
                   moduleName = "RCGApp"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///SomeStuff/DEV/RCGApp/IOS%20App/RCGApp/RCGApp/AppDelegate.swift"
                   timestampString = "458061820.412553"
                   startingColumnNumber = "9223372036854775807"
@@ -214,6 +215,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "RCGApp.AppDelegate.(application (RCGApp.AppDelegate) -&gt; (ObjectiveC.UIApplication, didFinishLaunchingWithOptions : Swift.Optional&lt;Swift.Dictionary&lt;ObjectiveC.NSObject, Swift.AnyObject&gt;&gt;) -&gt; Swift.Bool).(implicit closure #1)"
                   moduleName = "RCGApp"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///SomeStuff/DEV/RCGApp/IOS%20App/RCGApp/RCGApp/AppDelegate.swift"
                   timestampString = "458061820.412751"
                   startingColumnNumber = "9223372036854775807"
@@ -232,11 +234,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RCGApp/AppDelegate.swift"
-            timestampString = "458061837.844893"
+            timestampString = "461610011.189577"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
             landmarkName = "application(_:didFinishLaunchingWithOptions:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -264,11 +266,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RCGApp/NewsAndVacancies.swift"
-            timestampString = "458599880.19736"
+            timestampString = "462136027.28407"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
             landmarkName = "getAllNews()"
             landmarkType = "5">
          </BreakpointContent>
@@ -280,11 +282,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RCGApp/NewsAndVacancies.swift"
-            timestampString = "458599880.19736"
+            timestampString = "462136027.28407"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
             landmarkName = "getAllNews()"
             landmarkType = "5">
          </BreakpointContent>
@@ -376,11 +378,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RCGApp/NewsAndVacancies.swift"
-            timestampString = "458479235.621834"
+            timestampString = "462136027.28407"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
             landmarkName = "Vacancy"
             landmarkType = "3">
             <Locations>
@@ -390,6 +392,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "RCGApp.Vacancy.init (RCGApp.Vacancy.Type)(id : Swift.Int, title : Swift.String, announcement : Swift.String, announceImage : ObjectiveC.UIImage, fulltext : Swift.String, fulltextImage : ObjectiveC.UIImage, createdDate : Swift.String, rate : Swift.String, gender : Swift.String, city : Swift.String, schedule : Swift.String, validTillDate : Swift.String) -&gt; RCGApp.Vacancy"
                   moduleName = "RCGApp"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///SomeStuff/DEV/RCGApp/IOS%20App/RCGApp/RCGApp/NewsAndVacancies.swift"
                   timestampString = "458561843.795102"
                   startingColumnNumber = "9223372036854775807"
@@ -404,6 +407,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "RCGApp.Vacancy.announceImage.setter : ObjectiveC.UIImage"
                   moduleName = "RCGApp"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///SomeStuff/DEV/RCGApp/IOS%20App/RCGApp/RCGApp/NewsAndVacancies.swift"
                   timestampString = "458561843.803557"
                   startingColumnNumber = "9223372036854775807"
@@ -418,6 +422,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "RCGApp.Vacancy.announceImage.materializeForSet : ObjectiveC.UIImage"
                   moduleName = "RCGApp"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///SomeStuff/DEV/RCGApp/IOS%20App/RCGApp/RCGApp/NewsAndVacancies.swift"
                   timestampString = "458561843.803858"
                   startingColumnNumber = "9223372036854775807"
@@ -436,11 +441,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RCGApp/NewsAndVacancies.swift"
-            timestampString = "458479236.449158"
+            timestampString = "462136027.28407"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
             landmarkName = "Vacancy"
             landmarkType = "3">
             <Locations>
@@ -450,6 +455,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "RCGApp.Vacancy.init (RCGApp.Vacancy.Type)(id : Swift.Int, title : Swift.String, announcement : Swift.String, announceImage : ObjectiveC.UIImage, fulltext : Swift.String, fulltextImage : ObjectiveC.UIImage, createdDate : Swift.String, rate : Swift.String, gender : Swift.String, city : Swift.String, schedule : Swift.String, validTillDate : Swift.String) -&gt; RCGApp.Vacancy"
                   moduleName = "RCGApp"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///SomeStuff/DEV/RCGApp/IOS%20App/RCGApp/RCGApp/NewsAndVacancies.swift"
                   timestampString = "458561843.868936"
                   startingColumnNumber = "9223372036854775807"
@@ -464,6 +470,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "RCGApp.Vacancy.rate.getter : Swift.String"
                   moduleName = "RCGApp"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///SomeStuff/DEV/RCGApp/IOS%20App/RCGApp/RCGApp/NewsAndVacancies.swift"
                   timestampString = "458561843.869301"
                   startingColumnNumber = "9223372036854775807"
@@ -478,6 +485,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "RCGApp.Vacancy.rate.materializeForSet : Swift.String"
                   moduleName = "RCGApp"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///SomeStuff/DEV/RCGApp/IOS%20App/RCGApp/RCGApp/NewsAndVacancies.swift"
                   timestampString = "458561843.869918"
                   startingColumnNumber = "9223372036854775807"
@@ -496,11 +504,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RCGApp/NewsAndVacancies.swift"
-            timestampString = "458684570.878323"
+            timestampString = "462136027.28407"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "136"
-            endingLineNumber = "136"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
             landmarkName = "getAllVacancies()"
             landmarkType = "5">
          </BreakpointContent>
@@ -526,6 +534,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "RCGApp.News.init (RCGApp.News.Type)(id : Swift.Int, title : Swift.String, announcement : Swift.String, fulltext : Swift.String, fulltextImage : ObjectiveC.UIImage, createdDate : Swift.String) -&gt; RCGApp.News"
                   moduleName = "RCGApp"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///SomeStuff/DEV/RCGApp/IOS%20App/RCGApp/RCGApp/NewsAndVacancies.swift"
                   timestampString = "458569737.915847"
                   startingColumnNumber = "9223372036854775807"
@@ -540,6 +549,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "RCGApp.News.id.getter : Swift.Int"
                   moduleName = "RCGApp"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///SomeStuff/DEV/RCGApp/IOS%20App/RCGApp/RCGApp/NewsAndVacancies.swift"
                   timestampString = "458569737.916183"
                   startingColumnNumber = "9223372036854775807"
@@ -554,6 +564,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "RCGApp.News.id.setter : Swift.Int"
                   moduleName = "RCGApp"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///SomeStuff/DEV/RCGApp/IOS%20App/RCGApp/RCGApp/NewsAndVacancies.swift"
                   timestampString = "458569737.91637"
                   startingColumnNumber = "9223372036854775807"
@@ -568,6 +579,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "RCGApp.News.id.materializeForSet : Swift.Int"
                   moduleName = "RCGApp"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///SomeStuff/DEV/RCGApp/IOS%20App/RCGApp/RCGApp/NewsAndVacancies.swift"
                   timestampString = "458569737.916545"
                   startingColumnNumber = "9223372036854775807"
@@ -586,27 +598,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RCGApp/NewsAndVacancies.swift"
-            timestampString = "458599953.096029"
+            timestampString = "462136027.28407"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
-            landmarkName = "getAllNews()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RCGApp/NewsAndVacancies.swift"
-            timestampString = "458684570.878323"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "130"
-            endingLineNumber = "130"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
             landmarkName = "getAllVacancies()"
             landmarkType = "5">
          </BreakpointContent>
@@ -618,11 +614,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RCGApp/NewsAndVacancies.swift"
-            timestampString = "458684570.878323"
+            timestampString = "462136027.28407"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "131"
-            endingLineNumber = "131"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
             landmarkName = "getAllVacancies()"
             landmarkType = "5">
             <Locations>
@@ -632,6 +628,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "RCGApp.NewsAndVacanciesReceiver.getAllVacancies (RCGApp.NewsAndVacanciesReceiver)() -&gt; ()"
                   moduleName = "RCGApp"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///SomeStuff/DEV/RCGApp/IOS%20App/RCGApp/RCGApp/NewsAndVacancies.swift"
                   timestampString = "458684761.848457"
                   startingColumnNumber = "9223372036854775807"
@@ -646,6 +643,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "RCGApp.NewsAndVacanciesReceiver.getAllVacancies (RCGApp.NewsAndVacanciesReceiver)() -&gt; ()"
                   moduleName = "RCGApp"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///SomeStuff/DEV/RCGApp/IOS%20App/RCGApp/RCGApp/NewsAndVacancies.swift"
                   timestampString = "458684761.848753"
                   startingColumnNumber = "9223372036854775807"
@@ -671,6 +669,612 @@
             endingLineNumber = "12"
             landmarkName = "UIImage"
             landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RCGApp/VacancyRespondFormViewController.swift"
+            timestampString = "461685144.235682"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
+            landmarkName = "submitButtonClick(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RCGApp/VacancyRespondFormViewController.swift"
+            timestampString = "461685144.235682"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
+            landmarkName = "submitButtonClick(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RCGApp/VacancyRespondFormViewController.swift"
+            timestampString = "461685144.235682"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "144"
+            endingLineNumber = "144"
+            landmarkName = "submitButtonClick(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RCGApp/Agent.swift"
+            timestampString = "459782481.943197"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "206"
+            endingLineNumber = "206"
+            landmarkName = "send(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RCGApp/Agent.swift"
+            timestampString = "459782481.943197"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "205"
+            endingLineNumber = "205"
+            landmarkName = "send(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RCGApp/Agent.swift"
+            timestampString = "459782481.943197"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "197"
+            endingLineNumber = "197"
+            landmarkName = "data(_:mime:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RCGApp/Agent.swift"
+            timestampString = "459782481.943197"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "199"
+            endingLineNumber = "199"
+            landmarkName = "data(_:mime:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RCGApp/Agent.swift"
+            timestampString = "459782910.130083"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "init(url:headers:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RCGApp/Agent.swift"
+            timestampString = "459782913.345833"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "init(method:url:headers:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RCGApp/Agent.swift"
+            timestampString = "459782915.359151"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "init(method:url:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RCGApp/Agent.swift"
+            timestampString = "459783926.971068"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "220"
+            endingLineNumber = "220"
+            landmarkName = "end(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RCGApp/Agent.swift"
+            timestampString = "459783928.188943"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "221"
+            endingLineNumber = "221"
+            landmarkName = "end(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RCGApp/Agent.swift"
+            timestampString = "459783929.831085"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "216"
+            endingLineNumber = "216"
+            landmarkName = "end(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RCGApp/Agent.swift"
+            timestampString = "459784061.990002"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "222"
+            endingLineNumber = "222"
+            landmarkName = "end(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RCGApp/Agent.swift"
+            timestampString = "459784065.623901"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "223"
+            endingLineNumber = "223"
+            landmarkName = "end(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RCGApp/VacancyRespondFormViewController.swift"
+            timestampString = "461685144.235682"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
+            landmarkName = "textFieldEditingDone(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RCGApp/RCGTextFieldClass.swift"
+            timestampString = "461173061.245211"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "awakeFromNib()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RCGApp/RCGTextFieldClass.swift"
+            timestampString = "461540343.445541"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "RCGTextFieldClass"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RCGApp/VacancyRespondFormViewController.swift"
+            timestampString = "461685144.235682"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "168"
+            endingLineNumber = "168"
+            landmarkName = "submitButtonClick(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RCGApp/VacancyRespondFormViewController.swift"
+            timestampString = "461685144.235682"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "164"
+            endingLineNumber = "164"
+            landmarkName = "submitButtonClick(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RCGApp/VacancyViewController.swift"
+            timestampString = "462211550.25066"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "prepareForSegue(_:sender:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RCGApp/VacancyRespondFormViewController.swift"
+            timestampString = "461685442.785117"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "158"
+            endingLineNumber = "158"
+            landmarkName = "submitButtonClick(_:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RCGApp.VacancyRespondFormViewController.submitButtonClick (RCGApp.VacancyRespondFormViewController)(ObjectiveC.UIButton) -&gt; ()"
+                  moduleName = "RCGApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///SomeStuff/DEV/RCGApp/IOS%20App/RCGApp/RCGApp/VacancyRespondFormViewController.swift"
+                  timestampString = "461685825.858337"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "159"
+                  endingLineNumber = "159"
+                  offsetFromSymbolStart = "7337">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RCGApp.VacancyRespondFormViewController.(submitButtonClick (RCGApp.VacancyRespondFormViewController) -&gt; (ObjectiveC.UIButton) -&gt; ()).(closure #1)"
+                  moduleName = "RCGApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///SomeStuff/DEV/RCGApp/IOS%20App/RCGApp/RCGApp/VacancyRespondFormViewController.swift"
+                  timestampString = "461685825.858502"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "160"
+                  endingLineNumber = "160"
+                  offsetFromSymbolStart = "24">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RCGApp/VacancyRespondFormViewController.swift"
+            timestampString = "461685673.990103"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "161"
+            endingLineNumber = "161"
+            landmarkName = "submitButtonClick(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RCGApp/VacancyRespondFormViewController.swift"
+            timestampString = "461685786.248172"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "156"
+            endingLineNumber = "156"
+            landmarkName = "submitButtonClick(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RCGApp-Bridging-Header.h"
+            timestampString = "462052003.760611"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "9"
+            endingLineNumber = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RCGApp/NewsViewController.swift"
+            timestampString = "462094808.991684"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RCGApp/NewsFeedTableViewController.swift"
+            timestampString = "462136216.524738"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "tableView(_:cellForRowAtIndexPath:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RCGApp/NewsViewController.swift"
+            timestampString = "462211459.740977"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RCGApp/VacancyViewController.swift"
+            timestampString = "462182675.304476"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RCGApp/VacancyFeedTableViewController.swift"
+            timestampString = "462182758.369566"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
+            landmarkName = "prepareForSegue(_:sender:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RCGApp/NewsAndVacancies.swift"
+            timestampString = "462182845.216226"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "getAllVacancies()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RCGApp/NewsAndVacancies.swift"
+            timestampString = "462183001.973245"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "getAllVacancies()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RCGApp/VacancyFeedTableViewController.swift"
+            timestampString = "462183024.154926"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "tableView(_:cellForRowAtIndexPath:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RCGApp/VacancyFeedTableViewController.swift"
+            timestampString = "462183027.584098"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "tableView(_:cellForRowAtIndexPath:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RCGApp/NewsAndVacancies.swift"
+            timestampString = "462183330.882035"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
+            landmarkName = "getAllVacancies()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RCGApp/SDWebImage/SDWebImageDecoder.m"
+            timestampString = "462187727.309968"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "+decodedImageWithImage:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

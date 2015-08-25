@@ -10,7 +10,7 @@ import UIKit
 
 class VacancyViewController: UIViewController {
 
-    var fullTextImage: UIImage!
+    var fullTextImageURL: String?
     var maleImg: UIImage!
     var femaleImg: UIImage!
     var createdDate: String?
@@ -18,6 +18,7 @@ class VacancyViewController: UIViewController {
     var announcement: String?
     var fullText: String?
     var rate: String?
+    var vacancyId: Int?
     
     @IBOutlet weak var vacancyScrollView: UIScrollView!
     
@@ -36,7 +37,7 @@ class VacancyViewController: UIViewController {
         super.viewDidLoad()
         
         self.navigationItem.title = "ВАКАНСИЯ"
-        let buttonBack: UIButton = UIButton.buttonWithType(.Custom) as UIButton;
+        let buttonBack: UIButton = UIButton.buttonWithType(.Custom) as! UIButton;
         buttonBack.frame = CGRectMake(0, 0, 40, 40);
         buttonBack.setImage(UIImage(named: "backButton"), forState: .Normal);
         buttonBack.addTarget(self, action: "leftNavButtonClick:", forControlEvents: UIControlEvents.TouchUpInside);
@@ -45,7 +46,12 @@ class VacancyViewController: UIViewController {
         
         vacancyTitle.text = heading!
         vacancyAnnouncement.text = announcement!
-        vacancyFullTextImage.image = fullTextImage.rounded;
+        if fullTextImageURL != nil && fullTextImageURL != ""
+        {
+            vacancyFullTextImage.sd_setImageWithURL(NSURL(string: fullTextImageURL!))
+            vacancyFullTextImage.layer.cornerRadius = 5.0
+            vacancyFullTextImage.layer.masksToBounds = true
+        }
         vacancyMaleImg.image = maleImg;
         vacancyFemaleImg.image = femaleImg;
         vacancyCreatedDate.text = createdDate;
@@ -65,14 +71,16 @@ class VacancyViewController: UIViewController {
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
+        var vacancyRespondFormViewController = segue.destinationViewController as! VacancyRespondFormViewController
         // Pass the selected object to the new view controller.
+        vacancyRespondFormViewController.vacancyId = vacancyId
     }
-    */
+    
 
 }
