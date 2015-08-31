@@ -143,13 +143,20 @@ class VacancyRespondFormViewController: UIViewController {
     @IBAction func submitButtonClick(sender: UIButton) {
         if name.text == "" || lastName.text == "" || telephone.text == ""
         {
-            submitButtonTopMargin.constant = 40.0;
-            errorbox.text! = "Все поля обязательны к заполнению."
-            errorbox.hidden = false;
+            let failureNotification = MBProgressHUD.showHUDAddedTo(self.navigationController?.view, animated: true)
+            failureNotification.mode = MBProgressHUDMode.Text
+            failureNotification.color = UIColor(red: 194/255, green: 0, blue: 18/255, alpha: 0.8);
+            failureNotification.labelFont = UIFont(name: "Roboto Regular", size: 12)
+            failureNotification.labelText = "Ошибка!"
+            failureNotification.detailsLabelText = "Все поля обязательны для заполнения!"
+            failureNotification.hide(true, afterDelay: 3)
         }
         else {
-            errorbox.hidden = true;
-            UIApplication.sharedApplication().beginIgnoringInteractionEvents()
+            let loadingNotification = MBProgressHUD.showHUDAddedTo(self.navigationController?.view, animated: true)
+            loadingNotification.mode = MBProgressHUDMode.Indeterminate
+            loadingNotification.color = UIColor(red: 194/255, green: 0, blue: 18/255, alpha: 0.8);
+            loadingNotification.labelFont = UIFont(name: "Roboto Regular", size: 12)
+            loadingNotification.labelText = "Отправляем..."
             
             var request = HTTPTask();
             let replyText = "{lastname:\(lastName.text);name:\(name.text);telephone:\(telephone.text)}"
@@ -158,16 +165,37 @@ class VacancyRespondFormViewController: UIViewController {
 
             request.PUT(requestUrl, parameters: params, completionHandler: {(response: HTTPResponse) in
                 if let err = response.error {
+                    
+                    dispatch_async(dispatch_get_main_queue()) {
+                        loadingNotification.hide(true)
+                    
+                        let failureNotification = MBProgressHUD.showHUDAddedTo(self.navigationController?.view, animated: true)
+                        failureNotification.mode = MBProgressHUDMode.Text
+                        failureNotification.color = UIColor(red: 194/255, green: 0, blue: 18/255, alpha: 0.8);
+                        failureNotification.labelFont = UIFont(name: "Roboto Regular", size: 12)
+                        failureNotification.labelText = "Ошибка!"
+                        failureNotification.detailsLabelText = err.localizedDescription
+                        failureNotification.hide(true, afterDelay: 3)
+                    }
                     println("error: " + err.localizedDescription)
                 }
-                if let resp: AnyObject = response.responseObject {
+                else if let resp: AnyObject = response.responseObject {
                     let str = NSString(data: resp as! NSData, encoding: NSUTF8StringEncoding)
-                    println("Response \(str)")
+                    
+                    dispatch_async(dispatch_get_main_queue()) {
+                        loadingNotification.hide(true)
+                        
+                        let successNotification = MBProgressHUD.showHUDAddedTo(self.navigationController?.view, animated: true)
+                        successNotification.mode = MBProgressHUDMode.Text
+                        successNotification.color = UIColor(red: 0/255, green: 194/255, blue: 18/255, alpha: 0.8);
+                        successNotification.labelFont = UIFont(name: "Roboto Regular", size: 12)
+                        successNotification.labelText = "Отклик отправлен."
+                        successNotification.detailsLabelText = "Мы вам перезвоним!"
+                        
+                        successNotification.hide(true, afterDelay: 3)
+                    }
                 }
-                println(response.statusCode!)
-                println(response.text)
             })
-            UIApplication.sharedApplication().endIgnoringInteractionEvents()
 
         }
     }

@@ -32,7 +32,7 @@
 		8484B1181B5966C600649609 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8484B1161B5966C600649609 /* Main.storyboard */; };
 		84A59E6E1B443FC7004DD721 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A59E6D1B443FC7004DD721 /* UIImageExtensions.swift */; };
 		84C011D51B7CEADD006BEB1A /* RCGTextFieldClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C011D41B7CEADD006BEB1A /* RCGTextFieldClass.swift */; };
-		84C558BF1B3449D5009A14FC /* NewsAndVacancies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C558BE1B3449D5009A14FC /* NewsAndVacancies.swift */; };
+		84C558BF1B3449D5009A14FC /* NewsAndVacancyClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C558BE1B3449D5009A14FC /* NewsAndVacancyClass.swift */; };
 		84C558C31B35E47C009A14FC /* NewsCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C558C21B35E47C009A14FC /* NewsCellViewController.swift */; };
 		84CF31091B8C92F80026F81D /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CF30E91B8C92F80026F81D /* MKAnnotationView+WebCache.m */; };
 		84CF310A1B8C92F80026F81D /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CF30EB1B8C92F80026F81D /* NSData+ImageContentType.m */; };
@@ -89,13 +89,13 @@
 		844E135E1B511BA1001318C3 /* VacancyCellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VacancyCellViewController.swift; sourceTree = "<group>"; };
 		846B85FC1B2DFA3700A8C7B9 /* VacancyFeedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VacancyFeedTableViewController.swift; sourceTree = "<group>"; };
 		8483ADE51B1CC51E00EB7544 /* NewsFeedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsFeedTableViewController.swift; sourceTree = "<group>"; };
-		8484B1141B58D12100649609 /* RCGButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RCGButton.swift; sourceTree = "<group>"; };
+		8484B1141B58D12100649609 /* RCGButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RCGButton.swift; path = ../RCGButton.swift; sourceTree = "<group>"; };
 		8484B1171B5966C600649609 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		849F4B801B550DF000145648 /* RobotoBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RobotoBold.ttf; sourceTree = "<group>"; };
 		849F4B811B550DF000145648 /* RobotoMedium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RobotoMedium.ttf; sourceTree = "<group>"; };
 		84A59E6D1B443FC7004DD721 /* UIImageExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIImageExtensions.swift; path = ../UIImageExtensions.swift; sourceTree = "<group>"; };
 		84C011D41B7CEADD006BEB1A /* RCGTextFieldClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RCGTextFieldClass.swift; sourceTree = "<group>"; };
-		84C558BE1B3449D5009A14FC /* NewsAndVacancies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsAndVacancies.swift; sourceTree = "<group>"; };
+		84C558BE1B3449D5009A14FC /* NewsAndVacancyClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsAndVacancyClass.swift; sourceTree = "<group>"; };
 		84C558C21B35E47C009A14FC /* NewsCellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCellViewController.swift; sourceTree = "<group>"; };
 		84CF30B21B8A58940026F81D /* RCGApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RCGApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		84CF30E81B8C92F80026F81D /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
@@ -159,7 +159,6 @@
 			isa = PBXGroup;
 			children = (
 				84CF30B21B8A58940026F81D /* RCGApp-Bridging-Header.h */,
-				8484B1141B58D12100649609 /* RCGButton.swift */,
 				8416D6261B01CBF3005A8F05 /* RCGApp */,
 				8416D63E1B01CBF3005A8F05 /* RCGAppTests */,
 				8416D6251B01CBF3005A8F05 /* Products */,
@@ -184,13 +183,12 @@
 				844F74F11B814F4100D923F2 /* SwiftHTTP */,
 				8449A2B11B1DFA8F003D0E65 /* Resources */,
 				84A59E6D1B443FC7004DD721 /* UIImageExtensions.swift */,
-				84C011D41B7CEADD006BEB1A /* RCGTextFieldClass.swift */,
+				84EEFB3B1B8DB1E2004E2AFA /* Classes */,
 				843F51F21B627992003F00FF /* KeyboardLayoutConstraint.swift */,
 				8416D6291B01CBF3005A8F05 /* AppDelegate.swift */,
 				8483ADE51B1CC51E00EB7544 /* NewsFeedTableViewController.swift */,
 				84C558C21B35E47C009A14FC /* NewsCellViewController.swift */,
 				8416D62D1B01CBF3005A8F05 /* NewsViewController.swift */,
-				84C558BE1B3449D5009A14FC /* NewsAndVacancies.swift */,
 				846B85FC1B2DFA3700A8C7B9 /* VacancyFeedTableViewController.swift */,
 				844E135E1B511BA1001318C3 /* VacancyCellViewController.swift */,
 				8416D64B1B023C5E005A8F05 /* VacancyViewController.swift */,
@@ -309,6 +307,16 @@
 				84D4AF2A1B4C7B9B003889D9 /* SwiftyJSON.h */,
 			);
 			name = JSON;
+			sourceTree = "<group>";
+		};
+		84EEFB3B1B8DB1E2004E2AFA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8484B1141B58D12100649609 /* RCGButton.swift */,
+				84C011D41B7CEADD006BEB1A /* RCGTextFieldClass.swift */,
+				84C558BE1B3449D5009A14FC /* NewsAndVacancyClass.swift */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -447,7 +455,7 @@
 				84A59E6E1B443FC7004DD721 /* UIImageExtensions.swift in Sources */,
 				8446EE5E1B828B74008B3476 /* HTTPResponseSerializer.swift in Sources */,
 				843F51F31B627992003F00FF /* KeyboardLayoutConstraint.swift in Sources */,
-				84C558BF1B3449D5009A14FC /* NewsAndVacancies.swift in Sources */,
+				84C558BF1B3449D5009A14FC /* NewsAndVacancyClass.swift in Sources */,
 				8446EE621B828B74008B3476 /* HTTPUpload.swift in Sources */,
 				84CF31181B8C92F80026F81D /* UIView+WebCacheOperation.m in Sources */,
 				84CF31161B8C92F80026F81D /* UIImageView+HighlightedWebCache.m in Sources */,

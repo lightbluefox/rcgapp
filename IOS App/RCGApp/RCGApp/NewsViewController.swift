@@ -33,7 +33,10 @@ class NewsViewController: UIViewController {
             newsImage.sd_setImageWithURL(NSURL(string: imageURL!))
             newsImage.layer.cornerRadius = 5.0
             newsImage.layer.masksToBounds = true
-            //newsImage.image
+        }
+        else
+        {
+            newsImage.frame = CGRect(x: 0, y: 0, width: 0, height: 0)
         }
         
     

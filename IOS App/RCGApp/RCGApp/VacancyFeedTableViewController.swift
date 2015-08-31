@@ -15,16 +15,74 @@ class VacancyFeedTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //Получение всех вакансий
-        
-        itemsReceiver.getAllVacancies();
         
         self.navigationItem.title = "ВАКАНСИИ"
         self.navigationController?.navigationBar.translucent = false;
-        
         self.vacancyFeedView.rowHeight = 80
+        
+        //Описываем пул-ту-рефреш
+        self.refreshControl = UIRefreshControl();
+        self.refreshControl?.attributedTitle = NSAttributedString(string: "Потяните вниз, чтобы обновить");
+        self.refreshControl?.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
+        //Получение всех вакансий
+        //MARK: используя MBProgressHUD делаем экран загрузки, пока подгружаются вакансии
+        let loadingNotification = MBProgressHUD.showHUDAddedTo(self.navigationController?.view, animated: true)
+        loadingNotification.mode = MBProgressHUDMode.Indeterminate
+        loadingNotification.color = UIColor(red: 194/255, green: 0, blue: 18/255, alpha: 0.8);
+        loadingNotification.labelFont = UIFont(name: "Roboto Regular", size: 12)
+        loadingNotification.labelText = "Загрузка..."
+        
+        self.itemsReceiver.getAllVacancies({(success: Bool, result: String) in
+            if success {
+                loadingNotification.hide(true)
+                self.vacancyFeedView.reloadData()
+            }
+            else if !success
+            {
+                loadingNotification.hide(true)
+                
+                let failureNotification = MBProgressHUD.showHUDAddedTo(self.navigationController?.view, animated: true)
+                failureNotification.mode = MBProgressHUDMode.Text
+                failureNotification.color = UIColor(red: 194/255, green: 0, blue: 18/255, alpha: 0.8);
+                failureNotification.labelFont = UIFont(name: "Roboto Regular", size: 12)
+                failureNotification.labelText = "Ошибка!"
+                failureNotification.detailsLabelText = result
+                failureNotification.hide(true, afterDelay: 3)
+                self.vacancyFeedView.reloadData()
+            }
+        })
+        //
+        
     }
-
+    func refresh(sender:AnyObject) {
+        //MARK: используя MBProgressHUD делаем экран загрузки, пока подгружаются новости
+        let loadingNotification = MBProgressHUD.showHUDAddedTo(self.navigationController?.view, animated: true)
+        loadingNotification.mode = MBProgressHUDMode.Indeterminate
+        loadingNotification.color = UIColor(red: 194/255, green: 0, blue: 18/255, alpha: 0.8);
+        loadingNotification.labelFont = UIFont(name: "Roboto Regular", size: 12)
+        loadingNotification.labelText = "Загрузка..."
+        self.itemsReceiver.getAllNews({(success: Bool, result: String) in
+            if success {
+                loadingNotification.hide(true)
+                self.vacancyFeedView.reloadData()
+            }
+            else if !success
+            {
+                loadingNotification.hide(true)
+                
+                let failureNotification = MBProgressHUD.showHUDAddedTo(self.navigationController?.view, animated: true)
+                failureNotification.mode = MBProgressHUDMode.Text
+                failureNotification.color = UIColor(red: 194/255, green: 0, blue: 18/255, alpha: 0.8);
+                failureNotification.labelFont = UIFont(name: "Roboto Regular", size: 12)
+                failureNotification.labelText = "Ошибка!"
+                failureNotification.detailsLabelText = result
+                failureNotification.hide(true, afterDelay: 3)
+                self.vacancyFeedView.reloadData()
+            }
+        })
+        vacancyFeedView.reloadData();
+        self.refreshControl?.endRefreshing();
+    }
     override func viewWillAppear(animated: Bool) {
         vacancyFeedView.reloadData();
     }
@@ -61,12 +119,14 @@ class VacancyFeedTableViewController: UITableViewController {
         if currentVac.announceImageURL != ""
         {
             cell.cellVacAnnounceImage.sd_setImageWithURL(NSURL(string: currentVac.announceImageURL))
-            cell.cellVacAnnounceImage.image?.rounded
+            cell.cellVacAnnounceImage.layer.cornerRadius = 3.0
+            cell.cellVacAnnounceImage.layer.masksToBounds = true
         }
         else
         {
             cell.cellVacAnnounceImage.image = UIImage(named: "FullTextImage")!
-            cell.cellVacAnnounceImage.image?.rounded
+            cell.cellVacAnnounceImage.layer.cornerRadius = 3.0
+            cell.cellVacAnnounceImage.layer.masksToBounds = true
         }
         
         switch currentVac.gender {

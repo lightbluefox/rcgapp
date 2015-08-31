@@ -158,6 +158,11 @@
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="5dY-rS-vt7"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <action selector="textFieldEditingDone:" destination="28X-sI-BPi" eventType="editingDidEnd" id="mma-bd-r29"/>
                                         </connections>
@@ -165,12 +170,17 @@
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hgt-hx-sq2" customClass="RCGTextFieldClass" customModule="RCGApp" customModuleProvider="target">
                                         <rect key="frame" x="20" y="80" width="560" height="35"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="35" id="PpY-oo-DMC"/>
+                                            <constraint firstAttribute="height" constant="35" id="1DU-dN-Ibt"/>
                                             <constraint firstAttribute="width" constant="560" id="dIJ-7d-0V4"/>
                                         </constraints>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="dIJ-7d-0V4"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <action selector="textFieldEditingDone:" destination="28X-sI-BPi" eventType="editingDidEnd" id="uAB-vU-Zh9"/>
                                         </connections>
@@ -185,6 +195,11 @@
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" spellCheckingType="yes"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="dLS-Yz-sHW"/>
+                                            </mask>
+                                        </variation>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vrD-sP-lMp">
                                         <rect key="frame" x="556" y="140" width="14" height="14"/>
@@ -208,38 +223,38 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
+                                            <action selector="submitButtonClick:" destination="28X-sI-BPi" eventType="touchUpInside" id="M8f-WS-tXd"/>
                                             <action selector="submitButtonClick:" destination="IjK-Kz-KWH" eventType="touchUpInside" id="cFS-No-win"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="Hgt-hx-sq2" firstAttribute="centerX" secondItem="ZCB-J7-1by" secondAttribute="centerX" id="16a-S7-Kc2"/>
                                     <constraint firstAttribute="trailing" secondItem="0Xt-au-UEf" secondAttribute="trailing" constant="20" id="Kkj-1E-IRt"/>
-                                    <constraint firstAttribute="bottom" secondItem="ZCB-J7-1by" secondAttribute="bottom" constant="304" id="Njm-ue-TgS"/>
-                                    <constraint firstItem="50x-k9-uro" firstAttribute="top" secondItem="Hgt-hx-sq2" secondAttribute="bottom" constant="15" id="V29-FS-YLV"/>
-                                    <constraint firstItem="Hgt-hx-sq2" firstAttribute="top" secondItem="0Xt-au-UEf" secondAttribute="bottom" constant="15" id="YYn-83-GvX"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZCB-J7-1by" secondAttribute="bottom" constant="40" id="Njm-ue-TgS"/>
+                                    <constraint firstAttribute="bottom" secondItem="Hgt-hx-sq2" secondAttribute="bottom" constant="485" id="Syc-Ik-DkZ"/>
+                                    <constraint firstItem="Hgt-hx-sq2" firstAttribute="top" secondItem="0Xt-au-UEf" secondAttribute="bottom" constant="15" id="TvG-KA-qf0"/>
                                     <constraint firstAttribute="trailing" secondItem="50x-k9-uro" secondAttribute="trailing" constant="20" id="ay0-z7-I3h"/>
                                     <constraint firstAttribute="centerX" secondItem="Hgt-hx-sq2" secondAttribute="centerX" id="cDg-rx-s3c"/>
                                     <constraint firstItem="50x-k9-uro" firstAttribute="top" secondItem="vrD-sP-lMp" secondAttribute="bottom" constant="-24" id="cx8-Pc-4sE"/>
-                                    <constraint firstItem="50x-k9-uro" firstAttribute="top" secondItem="vrD-sP-lMp" secondAttribute="bottom" constant="-24" id="d1E-aK-Uoh"/>
                                     <constraint firstItem="0Xt-au-UEf" firstAttribute="top" secondItem="bz0-BB-Ze5" secondAttribute="top" constant="35" id="dJ1-EO-53b"/>
                                     <constraint firstItem="0Xt-au-UEf" firstAttribute="leading" secondItem="bz0-BB-Ze5" secondAttribute="leading" constant="20" id="dzK-Mc-HUd"/>
-                                    <constraint firstAttribute="trailing" secondItem="vrD-sP-lMp" secondAttribute="trailing" constant="29" id="ebj-lI-WAz"/>
-                                    <constraint firstItem="Hgt-hx-sq2" firstAttribute="leading" secondItem="bz0-BB-Ze5" secondAttribute="leading" constant="20" id="fOb-rl-eM8"/>
                                     <constraint firstItem="ZCB-J7-1by" firstAttribute="top" secondItem="50x-k9-uro" secondAttribute="bottom" constant="15" id="ghU-HA-WyJ"/>
                                     <constraint firstItem="50x-k9-uro" firstAttribute="centerX" secondItem="bz0-BB-Ze5" secondAttribute="centerX" id="l7c-eF-qQh"/>
                                     <constraint firstItem="50x-k9-uro" firstAttribute="leading" secondItem="bz0-BB-Ze5" secondAttribute="leading" constant="20" id="pfa-QL-Vh5"/>
+                                    <constraint firstItem="50x-k9-uro" firstAttribute="top" secondItem="Hgt-hx-sq2" secondAttribute="bottom" constant="15" id="prk-OJ-lh3"/>
                                     <constraint firstAttribute="centerX" secondItem="0Xt-au-UEf" secondAttribute="centerX" id="sgV-wR-NQw"/>
                                     <constraint firstItem="vrD-sP-lMp" firstAttribute="leading" secondItem="50x-k9-uro" secondAttribute="trailing" constant="-24" id="tIY-fm-l2j"/>
                                     <constraint firstAttribute="centerX" secondItem="ZCB-J7-1by" secondAttribute="centerX" id="uDq-Ve-60o"/>
-                                    <constraint firstItem="vrD-sP-lMp" firstAttribute="top" secondItem="Hgt-hx-sq2" secondAttribute="bottom" constant="7" id="xDs-Se-PeF"/>
-                                    <constraint firstItem="vrD-sP-lMp" firstAttribute="leading" secondItem="50x-k9-uro" secondAttribute="trailing" constant="-24" id="zw7-6m-X9C"/>
+                                    <constraint firstItem="Hgt-hx-sq2" firstAttribute="leading" secondItem="0Xt-au-UEf" secondAttribute="leading" id="uXZ-A2-tj3"/>
+                                    <constraint firstItem="Hgt-hx-sq2" firstAttribute="trailing" secondItem="0Xt-au-UEf" secondAttribute="trailing" id="w12-p7-J0Y"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="d1E-aK-Uoh"/>
-                                        <exclude reference="ebj-lI-WAz"/>
-                                        <exclude reference="xDs-Se-PeF"/>
-                                        <exclude reference="zw7-6m-X9C"/>
+                                        <exclude reference="sgV-wR-NQw"/>
+                                        <exclude reference="Syc-Ik-DkZ"/>
+                                        <exclude reference="cDg-rx-s3c"/>
+                                        <exclude reference="l7c-eF-qQh"/>
                                     </mask>
                                 </variation>
                             </scrollView>
@@ -279,7 +294,7 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bf2-Uc-spq" id="mcz-Ns-pG5">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FullTextImage" translatesAutoresizingMaskIntoConstraints="NO" id="gft-Ty-uaN">
+                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FullTextImage" translatesAutoresizingMaskIntoConstraints="NO" id="gft-Ty-uaN">
                                             <rect key="frame" x="13" y="20" width="40" height="40"/>
                                             <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="1"/>
                                             <constraints>
@@ -388,7 +403,7 @@
         <scene sceneID="sfT-s7-1C2">
             <objects>
                 <navigationController id="ics-0n-pBd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="VacFeed" selectedImage="VacFeed" id="V1H-25-6Mc">
+                    <tabBarItem key="tabBarItem" title="" id="V1H-25-6Mc">
                         <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="UrF-P4-iWB">
@@ -1013,7 +1028,7 @@
         <scene sceneID="3ED-Zb-LOp">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ESq-US-uP9" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="NewsFeed" id="qci-E3-jR9">
+                    <tabBarItem key="tabBarItem" title="" id="qci-E3-jR9">
                         <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -1034,7 +1049,7 @@
         <scene sceneID="qNM-Ea-PMM">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7OD-QI-76i" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="ContactUs" selectedImage="ContactUsSelected3" id="dfq-gU-ZvP">
+                    <tabBarItem key="tabBarItem" title="" id="dfq-gU-ZvP">
                         <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -1053,11 +1068,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ContactUs" width="34" height="35"/>
-        <image name="ContactUsSelected3" width="34" height="35"/>
         <image name="FullTextImage" width="692" height="433"/>
-        <image name="NewsFeed" width="34" height="35"/>
-        <image name="VacFeed" width="34" height="35"/>
         <image name="femaleGray" width="12" height="12"/>
         <image name="femaleRed" width="12" height="12"/>
         <image name="maleGray" width="8" height="13"/>

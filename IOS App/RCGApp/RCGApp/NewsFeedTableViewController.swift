@@ -59,19 +59,60 @@ class NewsFeedTableViewController: UITableViewController, UITableViewDelegate, U
         //MARK: используя MBProgressHUD делаем экран загрузки, пока подгружаются новости
         let loadingNotification = MBProgressHUD.showHUDAddedTo(self.navigationController?.view, animated: true)
         loadingNotification.mode = MBProgressHUDMode.Indeterminate
-        loadingNotification.color = UIColor.redColor()
-        loadingNotification.labelText = "Loading"
+        loadingNotification.color = UIColor(red: 194/255, green: 0, blue: 18/255, alpha: 0.8);
+        loadingNotification.labelFont = UIFont(name: "Roboto Regular", size: 12)
+        loadingNotification.labelText = "Загрузка..."
         
-        self.itemsReceiver.getAllNews({(result: String) in
-            loadingNotification.hide(true)
-            self.newsFeedTableView.reloadData()
+        
+        self.itemsReceiver.getAllNews({(success: Bool, result: String) in
+            if success {
+                loadingNotification.hide(true)
+                self.newsFeedTableView.reloadData()
+            }
+            else if !success
+            {
+                loadingNotification.hide(true)
+                
+                let failureNotification = MBProgressHUD.showHUDAddedTo(self.navigationController?.view, animated: true)
+                failureNotification.mode = MBProgressHUDMode.Text
+                failureNotification.color = UIColor(red: 194/255, green: 0, blue: 18/255, alpha: 0.8);
+                failureNotification.labelFont = UIFont(name: "Roboto Regular", size: 12)
+                failureNotification.labelText = "Ошибка!"
+                failureNotification.detailsLabelText = result
+                failureNotification.hide(true, afterDelay: 3)
+                self.newsFeedTableView.reloadData()
+            }
         })
 
 
         
     }
     func refresh(sender:AnyObject) {
-        //itemsReceiver.getAllNews();
+        //MARK: используя MBProgressHUD делаем экран загрузки, пока подгружаются новости
+        let loadingNotification = MBProgressHUD.showHUDAddedTo(self.navigationController?.view, animated: true)
+        loadingNotification.mode = MBProgressHUDMode.Indeterminate
+        loadingNotification.color = UIColor(red: 194/255, green: 0, blue: 18/255, alpha: 0.8);
+        loadingNotification.labelFont = UIFont(name: "Roboto Regular", size: 12)
+        loadingNotification.labelText = "Загрузка..."
+        self.itemsReceiver.getAllNews({(success: Bool, result: String) in
+            if success {
+                loadingNotification.hide(true)
+                self.newsFeedTableView.reloadData()
+            }
+            else if !success
+            {
+                loadingNotification.hide(true)
+                
+                let failureNotification = MBProgressHUD.showHUDAddedTo(self.navigationController?.view, animated: true)
+                failureNotification.mode = MBProgressHUDMode.Text
+                failureNotification.color = UIColor(red: 194/255, green: 0, blue: 18/255, alpha: 0.8);
+                failureNotification.labelFont = UIFont(name: "Roboto Regular", size: 12)
+                failureNotification.labelText = "Ошибка!"
+                failureNotification.detailsLabelText = result
+                failureNotification.hide(true, afterDelay: 3)
+                self.newsFeedTableView.reloadData()
+            }
+        })
         newsFeedTableView.reloadData();
         self.refreshControl?.endRefreshing();
     }
