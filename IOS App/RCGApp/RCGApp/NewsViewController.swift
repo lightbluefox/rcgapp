@@ -48,13 +48,23 @@ class NewsViewController: UIViewController {
         self.navigationItem.leftBarButtonItem = nil;
         self.navigationItem.hidesBackButton = true;
         
-        let buttonBack: UIButton = UIButton.buttonWithType(.Custom) as! UIButton;
+        let buttonBack: UIButton = UIButton(type: .Custom);
         buttonBack.frame = CGRectMake(0, 0, 40, 40);
         buttonBack.setImage(UIImage(named: "backButton"), forState: .Normal);
+        buttonBack.setImage(UIImage(named: "backButtonSelected"), forState: UIControlState.Highlighted)
         buttonBack.addTarget(self, action: "leftNavButtonClick:", forControlEvents: UIControlEvents.TouchUpInside);
-        var leftBarButtonItem: UIBarButtonItem = UIBarButtonItem(customView: buttonBack);
+        let leftBarButtonItem: UIBarButtonItem = UIBarButtonItem(customView: buttonBack);
         self.navigationItem.setLeftBarButtonItem(leftBarButtonItem, animated: false);
         
+        //Добавляем кнопку для вызоа sideBar
+        
+        let revealViewController = self.revealViewController() as SWRevealViewController
+        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        //self.navigationController?.navigationBarHidden = false;
+        
+        let revealButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem(rawValue: 15)!, target: revealViewController, action: Selector("rightRevealToggle:"))
+        revealButton.tintColor = UIColor.whiteColor()
+        self.navigationItem.rightBarButtonItem = revealButton
         //
         
         

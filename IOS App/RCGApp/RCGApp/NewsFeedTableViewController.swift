@@ -8,7 +8,8 @@
 
 import UIKit
 
-class NewsFeedTableViewController: UITableViewController, UITableViewDelegate, UITableViewDataSource {
+@available(iOS 8.0, *)
+class NewsFeedTableViewController: UITableViewController {
 
     @IBOutlet var newsFeedTableView: UITableView!
     var itemsReceiver = NewsAndVacanciesReceiver()
@@ -24,6 +25,17 @@ class NewsFeedTableViewController: UITableViewController, UITableViewDelegate, U
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Добавляем кнопку для вызоа sideBar
+        
+        let revealViewController = self.revealViewController() as SWRevealViewController
+        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        //self.navigationController?.navigationBarHidden = false;
+        
+        let revealButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem(rawValue: 15)!, target: revealViewController, action: Selector("rightRevealToggle:"))
+        revealButton.tintColor = UIColor.whiteColor()
+        self.navigationItem.rightBarButtonItem = revealButton
+        
         
         //Описываем пул-ту-рефреш
         self.refreshControl = UIRefreshControl();
@@ -42,26 +54,30 @@ class NewsFeedTableViewController: UITableViewController, UITableViewDelegate, U
         
         tabBar?.tintColor = UIColor.whiteColor();
         let tabItems = tabBar?.items;
-        let tabItem0 = tabItems![0] as! UITabBarItem;
-        tabItem0.image = UIImage(named:"NewsFeed")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal);
-        tabItem0.selectedImage = UIImage(named:"NewsFeed")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal);
+        let tabItem0 = tabItems![0] ;
+        tabItem0.image = UIImage(named:"news")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal);
+        tabItem0.selectedImage = UIImage(named:"newsSelected")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal);
         
-        let tabItem1 = tabItems![1] as! UITabBarItem;
-        tabItem1.image = UIImage(named:"VacFeed")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal);
-        tabItem1.selectedImage = UIImage(named:"VacFeed")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal);
+        let tabItem1 = tabItems![1] ;
+        tabItem1.image = UIImage(named:"vacancy")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal);
+        tabItem1.selectedImage = UIImage(named:"vacancySelected")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal);
         
-        let tabItem2 = tabItems![2] as! UITabBarItem;
-        tabItem2.image = UIImage(named:"ContactUs")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal);
-        tabItem2.selectedImage = UIImage(named:"ContactUsSelected3")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal);
+        /*
+        Обратная связь - скрыта, т.к. переехала в SideBar
+        
+        let tabItem2 = tabItems![2] ;
+        tabItem2.image = UIImage(named:"feedback")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal);
+        tabItem2.selectedImage = UIImage(named:"feedbackSelected")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal);*/
         //
         self.newsFeedTableView.rowHeight = 80;
         
         //MARK: используя MBProgressHUD делаем экран загрузки, пока подгружаются новости
         let loadingNotification = MBProgressHUD.showHUDAddedTo(self.navigationController?.view, animated: true)
         loadingNotification.mode = MBProgressHUDMode.Indeterminate
-        loadingNotification.color = UIColor(red: 194/255, green: 0, blue: 18/255, alpha: 0.8);
+        loadingNotification.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3)
+        //loadingNotification.color = UIColor(red: 194/255, green: 0, blue: 18/255, alpha: 0.8);
         loadingNotification.labelFont = UIFont(name: "Roboto Regular", size: 12)
-        loadingNotification.labelText = "Загрузка..."
+        loadingNotification.labelText = "Загрузка"
         
         
         self.itemsReceiver.getAllNews({(success: Bool, result: String) in
@@ -75,9 +91,10 @@ class NewsFeedTableViewController: UITableViewController, UITableViewDelegate, U
                 
                 let failureNotification = MBProgressHUD.showHUDAddedTo(self.navigationController?.view, animated: true)
                 failureNotification.mode = MBProgressHUDMode.Text
-                failureNotification.color = UIColor(red: 194/255, green: 0, blue: 18/255, alpha: 0.8);
+                failureNotification.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3)
+                //failureNotification.color = UIColor(red: 194/255, green: 0, blue: 18/255, alpha: 0.8);
                 failureNotification.labelFont = UIFont(name: "Roboto Regular", size: 12)
-                failureNotification.labelText = "Ошибка!"
+                failureNotification.labelText = "Ошибка"
                 failureNotification.detailsLabelText = result
                 failureNotification.hide(true, afterDelay: 3)
                 self.newsFeedTableView.reloadData()
@@ -85,15 +102,15 @@ class NewsFeedTableViewController: UITableViewController, UITableViewDelegate, U
         })
 
 
-        
     }
     func refresh(sender:AnyObject) {
         //MARK: используя MBProgressHUD делаем экран загрузки, пока подгружаются новости
         let loadingNotification = MBProgressHUD.showHUDAddedTo(self.navigationController?.view, animated: true)
         loadingNotification.mode = MBProgressHUDMode.Indeterminate
-        loadingNotification.color = UIColor(red: 194/255, green: 0, blue: 18/255, alpha: 0.8);
+        loadingNotification.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3);
+        //loadingNotification.color = UIColor(red: 194/255, green: 0, blue: 18/255, alpha: 0.8);
         loadingNotification.labelFont = UIFont(name: "Roboto Regular", size: 12)
-        loadingNotification.labelText = "Загрузка..."
+        loadingNotification.labelText = "Загрузка"
         self.itemsReceiver.getAllNews({(success: Bool, result: String) in
             if success {
                 loadingNotification.hide(true)
@@ -105,9 +122,10 @@ class NewsFeedTableViewController: UITableViewController, UITableViewDelegate, U
                 
                 let failureNotification = MBProgressHUD.showHUDAddedTo(self.navigationController?.view, animated: true)
                 failureNotification.mode = MBProgressHUDMode.Text
-                failureNotification.color = UIColor(red: 194/255, green: 0, blue: 18/255, alpha: 0.8);
+                failureNotification.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3)
+                //failureNotification.color = UIColor(red: 194/255, green: 0, blue: 18/255, alpha: 0.8);
                 failureNotification.labelFont = UIFont(name: "Roboto Regular", size: 12)
-                failureNotification.labelText = "Ошибка!"
+                failureNotification.labelText = "Ошибка"
                 failureNotification.detailsLabelText = result
                 failureNotification.hide(true, afterDelay: 3)
                 self.newsFeedTableView.reloadData()
@@ -158,12 +176,14 @@ class NewsFeedTableViewController: UITableViewController, UITableViewDelegate, U
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    // Get the new view controller using [segue destinationViewController].
-        var newsViewController =  segue.destinationViewController as! NewsViewController
-    //sender is a tapped NewsCellViewController
+        
+        //TODO:
+        // Get the new view controller using [segue destinationViewController].
+        let newsViewController =  segue.destinationViewController as! NewsViewController
+        //sender is a tapped NewsCellViewController
         let cell = sender as! NewsCellViewController
         
-        var indexPath = self.newsFeedTableView.indexPathForCell(cell);
+        let indexPath = self.newsFeedTableView.indexPathForCell(cell);
         
         let currentNews = self.itemsReceiver.newsStack[indexPath!.row];
         newsViewController.heading = currentNews.title;

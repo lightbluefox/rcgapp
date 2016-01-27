@@ -8,3 +8,4 @@ if (str != nil) && (str != "") {
     var b = str!
 }
 
+NSData = NSData(

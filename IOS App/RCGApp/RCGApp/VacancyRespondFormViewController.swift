@@ -32,13 +32,24 @@ class VacancyRespondFormViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Добавляем кнопку для вызова sideBar
+        
+        let revealViewController = self.revealViewController() as SWRevealViewController
+        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        //self.navigationController?.navigationBarHidden = false;
+        
+        let revealButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem(rawValue: 15)!, target: revealViewController, action: Selector("rightRevealToggle:"))
+        revealButton.tintColor = UIColor.whiteColor()
+        self.navigationItem.rightBarButtonItem = revealButton
+        
         //Mark: заголовок и кнопка "Назад"
         self.navigationItem.title = "ОТКЛИК НА ВАКАНСИЮ"
-        let buttonBack: UIButton = UIButton.buttonWithType(.Custom) as! UIButton;
+        let buttonBack: UIButton = UIButton(type: .Custom);
         buttonBack.frame = CGRectMake(0, 0, 40, 40);
         buttonBack.setImage(UIImage(named: "backButton"), forState: .Normal);
+        buttonBack.setImage(UIImage(named: "backButtonSelected"), forState: UIControlState.Highlighted)
         buttonBack.addTarget(self, action: "leftNavButtonClick:", forControlEvents: UIControlEvents.TouchUpInside);
-        var leftBarButtonItem: UIBarButtonItem = UIBarButtonItem(customView: buttonBack);
+        let leftBarButtonItem: UIBarButtonItem = UIBarButtonItem(customView: buttonBack);
         self.navigationItem.setLeftBarButtonItem(leftBarButtonItem, animated: false);
         
         
@@ -79,7 +90,7 @@ class VacancyRespondFormViewController: UIViewController {
                 switch (userInfo[UIKeyboardAnimationDurationUserInfoKey] as? NSNumber, userInfo[UIKeyboardAnimationCurveUserInfoKey] as? NSNumber) {
                 case let (.Some(duration), .Some(curve)):
                     
-                    let options = UIViewAnimationOptions(curve.unsignedLongValue)
+                    let options = UIViewAnimationOptions(rawValue: curve.unsignedLongValue)
                     
                     UIView.animateWithDuration(
                         NSTimeInterval(duration.doubleValue),
@@ -104,7 +115,7 @@ class VacancyRespondFormViewController: UIViewController {
             switch (userInfo[UIKeyboardAnimationDurationUserInfoKey] as? NSNumber, userInfo[UIKeyboardAnimationCurveUserInfoKey] as? NSNumber) {
             case let (.Some(duration), .Some(curve)):
                 
-                let options = UIViewAnimationOptions(curve.unsignedLongValue)
+                let options = UIViewAnimationOptions(rawValue: curve.unsignedLongValue)
                 
                 UIView.animateWithDuration(
                     NSTimeInterval(duration.doubleValue),
@@ -123,7 +134,7 @@ class VacancyRespondFormViewController: UIViewController {
     
     @IBAction func textFieldEditingDone(sender: UITextField) {
         if sender.text != "" {
-            var imageView = UIImageView();
+            let imageView = UIImageView();
             imageView.image = UIImage(named: "textRectangleOk");
             imageView.frame = CGRect(x: 0, y: 0, width: 24, height: 14);
             imageView.contentMode = UIViewContentMode.Left;
@@ -131,7 +142,7 @@ class VacancyRespondFormViewController: UIViewController {
         }
         else
         {
-            var imageView = UIImageView();
+            let imageView = UIImageView();
             imageView.image = UIImage(named: "textRectangle");
             imageView.frame = CGRect(x: 0, y: 0, width: 24, height: 14);
             imageView.contentMode = UIViewContentMode.Left;
@@ -139,64 +150,67 @@ class VacancyRespondFormViewController: UIViewController {
         }
     }
     
-    
+    @available(iOS 8.0, *)
     @IBAction func submitButtonClick(sender: UIButton) {
         if name.text == "" || lastName.text == "" || telephone.text == ""
         {
             let failureNotification = MBProgressHUD.showHUDAddedTo(self.navigationController?.view, animated: true)
             failureNotification.mode = MBProgressHUDMode.Text
-            failureNotification.color = UIColor(red: 194/255, green: 0, blue: 18/255, alpha: 0.8);
+            failureNotification.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3)
+            //failureNotification.color = UIColor(red: 194/255, green: 0, blue: 18/255, alpha: 0.8);
             failureNotification.labelFont = UIFont(name: "Roboto Regular", size: 12)
-            failureNotification.labelText = "Ошибка!"
-            failureNotification.detailsLabelText = "Все поля обязательны для заполнения!"
+            failureNotification.labelText = "Ошибка"
+            failureNotification.detailsLabelText = "Все поля обязательны для заполнения"
             failureNotification.hide(true, afterDelay: 3)
         }
         else {
             let loadingNotification = MBProgressHUD.showHUDAddedTo(self.navigationController?.view, animated: true)
             loadingNotification.mode = MBProgressHUDMode.Indeterminate
-            loadingNotification.color = UIColor(red: 194/255, green: 0, blue: 18/255, alpha: 0.8);
+            loadingNotification.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3)
+            //loadingNotification.color = UIColor(red: 194/255, green: 0, blue: 18/255, alpha: 0.8);
             loadingNotification.labelFont = UIFont(name: "Roboto Regular", size: 12)
-            loadingNotification.labelText = "Отправляем..."
+            loadingNotification.labelText = "Отправляем"
             
-            var request = HTTPTask();
-            let replyText = "{lastname:\(lastName.text);name:\(name.text);telephone:\(telephone.text)}"
-            let requestUrl = "http://agency.cloudapp.net/vacancy/\(vacancyId!)/replies"
-            let params: Dictionary<String,AnyObject> = ["userId":"654654","commentType":"vacancyReply","text":replyText];
-
-            request.PUT(requestUrl, parameters: params, completionHandler: {(response: HTTPResponse) in
-                if let err = response.error {
-                    
-                    dispatch_async(dispatch_get_main_queue()) {
-                        loadingNotification.hide(true)
-                    
-                        let failureNotification = MBProgressHUD.showHUDAddedTo(self.navigationController?.view, animated: true)
-                        failureNotification.mode = MBProgressHUDMode.Text
-                        failureNotification.color = UIColor(red: 194/255, green: 0, blue: 18/255, alpha: 0.8);
-                        failureNotification.labelFont = UIFont(name: "Roboto Regular", size: 12)
-                        failureNotification.labelText = "Ошибка!"
-                        failureNotification.detailsLabelText = err.localizedDescription
-                        failureNotification.hide(true, afterDelay: 3)
-                    }
-                    println("error: " + err.localizedDescription)
-                }
-                else if let resp: AnyObject = response.responseObject {
-                    let str = NSString(data: resp as! NSData, encoding: NSUTF8StringEncoding)
-                    
-                    dispatch_async(dispatch_get_main_queue()) {
-                        loadingNotification.hide(true)
+            let request = HTTPTask()
+                let replyText = "{\"lastname\":\"\(lastName.text!)\",\"name\":\"\(name.text!)\",\"telephone\":\"\(telephone.text!)\"}"
+                let requestUrl = "http://agency.cloudapp.net/vacancy/\(vacancyId!)/replies"
+                let params: Dictionary<String,AnyObject> = ["userId":"654654","commentType":"vacancyReply","text":replyText];
+                
+                request.PUT(requestUrl, parameters: params, completionHandler: {(response: HTTPResponse) in
+                    if let err = response.error {
                         
-                        let successNotification = MBProgressHUD.showHUDAddedTo(self.navigationController?.view, animated: true)
-                        successNotification.mode = MBProgressHUDMode.Text
-                        successNotification.color = UIColor(red: 0/255, green: 194/255, blue: 18/255, alpha: 0.8);
-                        successNotification.labelFont = UIFont(name: "Roboto Regular", size: 12)
-                        successNotification.labelText = "Отклик отправлен."
-                        successNotification.detailsLabelText = "Мы вам перезвоним!"
-                        
-                        successNotification.hide(true, afterDelay: 3)
+                        dispatch_async(dispatch_get_main_queue()) {
+                            loadingNotification.hide(true)
+                            
+                            let failureNotification = MBProgressHUD.showHUDAddedTo(self.navigationController?.view, animated: true)
+                            failureNotification.mode = MBProgressHUDMode.Text
+                            failureNotification.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3)
+                            //failureNotification.color = UIColor(red: 194/255, green: 0, blue: 18/255, alpha: 0.8);
+                            failureNotification.labelFont = UIFont(name: "Roboto Regular", size: 12)
+                            failureNotification.labelText = "Ошибка"
+                            failureNotification.detailsLabelText = err.localizedDescription
+                            failureNotification.hide(true, afterDelay: 3)
+                        }
+                        print("error: " + err.localizedDescription)
                     }
-                }
-            })
-
+                    else if let resp: AnyObject = response.responseObject {
+                        _ = NSString(data: resp as! NSData, encoding: NSUTF8StringEncoding)
+                        
+                        dispatch_async(dispatch_get_main_queue()) {
+                            loadingNotification.hide(true)
+                            
+                            let successNotification = MBProgressHUD.showHUDAddedTo(self.navigationController?.view, animated: true)
+                            successNotification.mode = MBProgressHUDMode.Text
+                            successNotification.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3)
+                            successNotification.color = UIColor(red: 0/255, green: 194/255, blue: 18/255, alpha: 0.8);
+                            successNotification.labelFont = UIFont(name: "Roboto Regular", size: 12)
+                            successNotification.labelText = "Отклик отправлен"
+                            successNotification.detailsLabelText = "Мы вам перезвоним!"
+                            
+                            successNotification.hide(true, afterDelay: 3)
+                        }
+                    }
+                })
         }
     }
     

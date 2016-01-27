@@ -15,8 +15,8 @@ class RCGButton: UIButton {
     override func drawRect(rect: CGRect) {
         // Drawing code
     
-        var context = UIGraphicsGetCurrentContext();
-        var color = UIColor(red: 194/255, green: 0, blue: 18/255, alpha: 1.0);
+        let context = UIGraphicsGetCurrentContext();
+        let color = UIColor(red: 194/255, green: 0, blue: 18/255, alpha: 1.0);
         
         CGContextSetFillColorWithColor(context, color.CGColor)
         

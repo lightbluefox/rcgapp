@@ -8,6 +8,7 @@
 
 import UIKit
 
+@available(iOS 8.0, *)
 class VacancyFeedTableViewController: UITableViewController {
 
     @IBOutlet var vacancyFeedView: UITableView!
@@ -20,6 +21,16 @@ class VacancyFeedTableViewController: UITableViewController {
         self.navigationController?.navigationBar.translucent = false;
         self.vacancyFeedView.rowHeight = 80
         
+        //Добавляем кнопку для вызоа sideBar
+        
+        let revealViewController = self.revealViewController() as SWRevealViewController
+        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        //self.navigationController?.navigationBarHidden = false;
+        
+        let revealButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem(rawValue: 15)!, target: revealViewController, action: Selector("rightRevealToggle:"))
+        revealButton.tintColor = UIColor.whiteColor()
+        self.navigationItem.rightBarButtonItem = revealButton
+        
         //Описываем пул-ту-рефреш
         self.refreshControl = UIRefreshControl();
         self.refreshControl?.attributedTitle = NSAttributedString(string: "Потяните вниз, чтобы обновить");
@@ -28,9 +39,10 @@ class VacancyFeedTableViewController: UITableViewController {
         //MARK: используя MBProgressHUD делаем экран загрузки, пока подгружаются вакансии
         let loadingNotification = MBProgressHUD.showHUDAddedTo(self.navigationController?.view, animated: true)
         loadingNotification.mode = MBProgressHUDMode.Indeterminate
-        loadingNotification.color = UIColor(red: 194/255, green: 0, blue: 18/255, alpha: 0.8);
+        loadingNotification.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3)
+        //loadingNotification.color = UIColor(red: 194/255, green: 0, blue: 18/255, alpha: 0.8);
         loadingNotification.labelFont = UIFont(name: "Roboto Regular", size: 12)
-        loadingNotification.labelText = "Загрузка..."
+        loadingNotification.labelText = "Загрузка"
         
         self.itemsReceiver.getAllVacancies({(success: Bool, result: String) in
             if success {
@@ -43,9 +55,10 @@ class VacancyFeedTableViewController: UITableViewController {
                 
                 let failureNotification = MBProgressHUD.showHUDAddedTo(self.navigationController?.view, animated: true)
                 failureNotification.mode = MBProgressHUDMode.Text
-                failureNotification.color = UIColor(red: 194/255, green: 0, blue: 18/255, alpha: 0.8);
+                failureNotification.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3)
+                //failureNotification.color = UIColor(red: 194/255, green: 0, blue: 18/255, alpha: 0.8);
                 failureNotification.labelFont = UIFont(name: "Roboto Regular", size: 12)
-                failureNotification.labelText = "Ошибка!"
+                failureNotification.labelText = "Ошибка"
                 failureNotification.detailsLabelText = result
                 failureNotification.hide(true, afterDelay: 3)
                 self.vacancyFeedView.reloadData()
@@ -58,10 +71,11 @@ class VacancyFeedTableViewController: UITableViewController {
         //MARK: используя MBProgressHUD делаем экран загрузки, пока подгружаются новости
         let loadingNotification = MBProgressHUD.showHUDAddedTo(self.navigationController?.view, animated: true)
         loadingNotification.mode = MBProgressHUDMode.Indeterminate
-        loadingNotification.color = UIColor(red: 194/255, green: 0, blue: 18/255, alpha: 0.8);
+        loadingNotification.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3)
+        //loadingNotification.color = UIColor(red: 194/255, green: 0, blue: 18/255, alpha: 0.8);
         loadingNotification.labelFont = UIFont(name: "Roboto Regular", size: 12)
-        loadingNotification.labelText = "Загрузка..."
-        self.itemsReceiver.getAllNews({(success: Bool, result: String) in
+        loadingNotification.labelText = "Загрузка"
+        self.itemsReceiver.getAllVacancies({(success: Bool, result: String) in
             if success {
                 loadingNotification.hide(true)
                 self.vacancyFeedView.reloadData()
@@ -72,9 +86,10 @@ class VacancyFeedTableViewController: UITableViewController {
                 
                 let failureNotification = MBProgressHUD.showHUDAddedTo(self.navigationController?.view, animated: true)
                 failureNotification.mode = MBProgressHUDMode.Text
-                failureNotification.color = UIColor(red: 194/255, green: 0, blue: 18/255, alpha: 0.8);
+                failureNotification.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3)
+                //failureNotification.color = UIColor(red: 194/255, green: 0, blue: 18/255, alpha: 0.8);
                 failureNotification.labelFont = UIFont(name: "Roboto Regular", size: 12)
-                failureNotification.labelText = "Ошибка!"
+                failureNotification.labelText = "Ошибка"
                 failureNotification.detailsLabelText = result
                 failureNotification.hide(true, afterDelay: 3)
                 self.vacancyFeedView.reloadData()
@@ -130,8 +145,8 @@ class VacancyFeedTableViewController: UITableViewController {
         }
         
         switch currentVac.gender {
-        case 0 : cell.cellVacFemaleImage?.image = UIImage(named: "femaleRed"); cell.cellVacMaleImage?.image = UIImage(named: "maleGray");
-        case 1 : cell.cellVacFemaleImage?.image = UIImage(named: "femaleGray"); cell.cellVacMaleImage?.image = UIImage(named: "maleRed");
+        case 0 : cell.cellVacFemaleImage?.image = UIImage(named: "femaleGray"); cell.cellVacMaleImage?.image = UIImage(named: "maleRed");
+        case 1 : cell.cellVacFemaleImage?.image = UIImage(named: "femaleRed"); cell.cellVacMaleImage?.image = UIImage(named: "maleGray");
         case 2 : cell.cellVacFemaleImage?.image = UIImage(named: "femaleRed"); cell.cellVacMaleImage?.image = UIImage(named: "maleRed");
         default : cell.cellVacFemaleImage?.image = UIImage(named: "femaleRed"); cell.cellVacMaleImage?.image = UIImage(named: "maleRed");
         }
@@ -190,11 +205,11 @@ class VacancyFeedTableViewController: UITableViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using [segue destinationViewController].
-        var vacancyViewController = segue.destinationViewController as! VacancyViewController
+        let vacancyViewController = segue.destinationViewController as! VacancyViewController
         // Pass the selected object to the new view controller.
         let cell = sender as! VacancyCellViewController
         
-        var indexPath = self.vacancyFeedView.indexPathForCell(cell)
+        let indexPath = self.vacancyFeedView.indexPathForCell(cell)
         let currentVac = self.itemsReceiver.vacStack[indexPath!.row]
         vacancyViewController.fullTextImageURL = currentVac.fullTextImageURL
         vacancyViewController.heading = currentVac.title
@@ -204,8 +219,8 @@ class VacancyFeedTableViewController: UITableViewController {
         vacancyViewController.fullText = currentVac.fullText
         vacancyViewController.vacancyId = currentVac.id
         switch currentVac.gender {
-        case 0 : vacancyViewController.femaleImg = UIImage(named: "femaleRed"); vacancyViewController.maleImg = UIImage(named: "maleGray");
-        case 1 : vacancyViewController.femaleImg = UIImage(named: "femaleGray"); vacancyViewController.maleImg = UIImage(named: "maleRed");
+        case 0 : vacancyViewController.femaleImg = UIImage(named: "femaleGray"); vacancyViewController.maleImg = UIImage(named: "maleRed");
+        case 1 : vacancyViewController.femaleImg = UIImage(named: "femaleRed"); vacancyViewController.maleImg = UIImage(named: "maleGray");
         case 2 : vacancyViewController.femaleImg = UIImage(named: "femaleRed"); vacancyViewController.maleImg = UIImage(named: "maleRed");
         default : vacancyViewController.femaleImg = UIImage(named: "femaleRed"); vacancyViewController.maleImg = UIImage(named: "maleRed");
         }

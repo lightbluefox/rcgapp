@@ -7,7 +7,6 @@ class News {
     var fullText = "";
     var fullTextImageURL = "";
     var createdDate = "";
-    
     init (id: Int, title: String, announcement: String, fulltext: String, fullTextImageURL: String, createdDate: String) {
         self.id = id;
         self.title = title;
@@ -45,6 +44,7 @@ class Vacancy: News {
     }
 }
 
+@available(iOS 8.0, *)
 class NewsAndVacanciesReceiver {
     //класс-получатель новостей и вакансий
     var newsStack = [News]();
@@ -53,7 +53,7 @@ class NewsAndVacanciesReceiver {
     func getAllNews(completionHandlerNews: (success: Bool, result: String) -> Void) {
         newsStack.removeAll(keepCapacity: false);
         
-        var request = HTTPTask()
+        let request = HTTPTask()
         request.GET("http://agency.cloudapp.net/news", parameters: nil, completionHandler: {(response: HTTPResponse) in
             if let err = response.error {
                         dispatch_async(dispatch_get_main_queue()) {
@@ -66,20 +66,20 @@ class NewsAndVacanciesReceiver {
                 let requestedDataUnwrapped = requestedData!;
                 let jsonString = requestedDataUnwrapped;
                 let jsonData = jsonString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: true)
-                let jsonObject: AnyObject! = NSJSONSerialization.JSONObjectWithData(jsonData!, options: NSJSONReadingOptions(0), error: nil)
+                let jsonObject: AnyObject! = try? NSJSONSerialization.JSONObjectWithData(jsonData!, options: NSJSONReadingOptions(rawValue: 0))
     
                 let json = JSON(jsonObject);
                 for var i = 0; i < json.count; i++ {
     
     
-                    var id = json[i]["id"] != nil ? json[i]["id"].int! : 0;
-                    var title =  json[i]["title"] != nil ? json[i]["title"].string! : "";
-                    var announcement = json[i]["shortText"] != nil ? json[i]["shortText"].string! : "";
-                    var fulltext = json[i]["text"] != nil ? json[i]["text"].string! : "";
+                    let id = json[i]["id"] != nil ? json[i]["id"].int! : 0;
+                    let title =  json[i]["title"] != nil ? json[i]["title"].string! : "";
+                    let announcement = json[i]["shortText"] != nil ? json[i]["shortText"].string! : "";
+                    let fulltext = json[i]["text"] != nil ? json[i]["text"].string! : "";
                //
-                    var fullTextImageURL = json[i]["picture"] != nil ? json[i]["picture"].string! : "";
+                    let fullTextImageURL = json[i]["picture"] != nil ? json[i]["picture"].string! : "";
                 //
-                    var createdDate = json[i]["dateCreated"] != nil ? json[i]["dateCreated"].string!.formatedDate : "";
+                    let createdDate = json[i]["dateCreated"] != nil ? json[i]["dateCreated"].string!.formatedDate : "";
                     
                     self.newsStack.append(News(id: id, title: title, announcement: announcement, fulltext: fulltext, fullTextImageURL: fullTextImageURL, createdDate: createdDate));
                 }
@@ -94,7 +94,7 @@ class NewsAndVacanciesReceiver {
     func getAllVacancies(completionHandlerVacancy: (success: Bool, result: String) -> Void) {
         vacStack.removeAll(keepCapacity: false);
         
-        var request = HTTPTask()
+        let request = HTTPTask()
         request.GET("http://agency.cloudapp.net/vacancy", parameters: nil, completionHandler: {(response: HTTPResponse) in
             if let err = response.error {
                 dispatch_async(dispatch_get_main_queue()) {
@@ -107,26 +107,26 @@ class NewsAndVacanciesReceiver {
                 let requestedDataUnwrapped = requestedData!;
                 let jsonString = requestedDataUnwrapped;
                 let jsonData = jsonString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: true)
-                let jsonObject: AnyObject! = NSJSONSerialization.JSONObjectWithData(jsonData!, options: NSJSONReadingOptions(0), error: nil)
+                let jsonObject: AnyObject! = try? NSJSONSerialization.JSONObjectWithData(jsonData!, options: NSJSONReadingOptions(rawValue: 0))
                 
                 let json = JSON(jsonObject);
                 for var i = 0; i < json.count; i++ {
                     
                     //Получаем все поля, проверяем на наличие значения
                     
-                    var id = json[i]["id"] != nil ? json[i]["id"].int : 0;
-                    var title = json[i]["title"] != nil ? json[i]["title"].string! : "";
-                    var announcement = json[i]["shortText"] != nil ? json[i]["shortText"].string! : "";
-                    var fulltext = json[i]["text"] != nil ? json[i]["text"].string! : "";
-                    var announceImageURL = json[i]["previewPicture"] != nil ? json[i]["previewPicture"].string! : "";
-                    var fullTextImageURL = json[i]["picture"] != nil ? json[i]["picture"].string! : "";
+                    let id = json[i]["id"] != nil ? json[i]["id"].int : 0;
+                    let title = json[i]["title"] != nil ? json[i]["title"].string! : "";
+                    let announcement = json[i]["shortText"] != nil ? json[i]["shortText"].string! : "";
+                    let fulltext = json[i]["text"] != nil ? json[i]["text"].string! : "";
+                    let announceImageURL = json[i]["previewPicture"] != nil ? json[i]["previewPicture"].string! : "";
+                    let fullTextImageURL = json[i]["picture"] != nil ? json[i]["picture"].string! : "";
                     var gender = 0
-                    var createdDate = json[i]["dateCreated"] != nil ? json[i]["dateCreated"].string!.formatedDate : "";
+                    let createdDate = json[i]["dateCreated"] != nil ? json[i]["dateCreated"].string!.formatedDate : "";
                     var rate = "";
                     var schedule = "";
                     var city = "";
                     var validTillDate = "";
-                    var vac = json[i]["Vacancy"];
+                    _ = json[i]["Vacancy"];
                     if json[i]["Vacancy"] != nil {
                         gender = json[i]["Vacancy"]["isMale"].int!;
                         rate = json[i]["Vacancy"]["money"] != nil ? json[i]["Vacancy"]["money"].string! : "";

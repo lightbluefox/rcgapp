@@ -7,6 +7,7 @@
 //
 #import "RCGApp/SDWebImage/UIImageView+WebCache.h"
 #import "RCGApp/MBProgressHUD/MBProgressHUD.h"
+#import "RCGApp/SWRevealViewController/SWRevealViewController.h"
 
 #ifndef RCGApp_RCGApp_Bridging_Header_h
 #define RCGApp_RCGApp_Bridging_Header_h
