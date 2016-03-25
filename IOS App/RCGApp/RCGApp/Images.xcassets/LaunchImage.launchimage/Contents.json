@@ -21,9 +21,9 @@
     {
       "orientation" : "portrait",
       "idiom" : "iphone",
+      "filename" : "640x960_launchscreen-1.png",
       "extent" : "full-screen",
       "minimum-system-version" : "7.0",
-      "filename" : "640x960_launchscreen-1.png",
       "scale" : "2x"
     },
     {
@@ -44,15 +44,15 @@
     {
       "orientation" : "portrait",
       "idiom" : "iphone",
-      "extent" : "full-screen",
       "filename" : "splashscreen_4.png",
+      "extent" : "full-screen",
       "scale" : "2x"
     },
     {
       "orientation" : "portrait",
       "idiom" : "iphone",
-      "extent" : "full-screen",
       "filename" : "splashimage640x1136-1.png",
+      "extent" : "full-screen",
       "subtype" : "retina4",
       "scale" : "2x"
     }

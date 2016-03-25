@@ -52,16 +52,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             tabBar.tintColor = UIColor.whiteColor();
             
         }
-        else //ниже iOS 7
-        {
-            navBar.tintColor = UIColor(red: 194/255, green: 0, blue: 18/255, alpha: 1.0);
-            tabBar.tintColor = UIColor(red: 194/255, green: 0, blue: 18/255, alpha: 1.0);
-        }
         //Стиль заголовка
         navBar.titleTextAttributes = [NSFontAttributeName: navBarFont, NSForegroundColorAttributeName: UIColor.whiteColor()];
         
         //Чтобы избавиться от стандартного выделения выбранного таба, используем такой костыль.
-        tabBar.selectionIndicatorImage = UIImage(named: "selectedItemImage");
+        //tabBar.selectionIndicatorImage = UIImage(named: "selectedItemImage");
         
         return true
     }

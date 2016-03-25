@@ -32,16 +32,6 @@ class VacancyRespondFormViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Добавляем кнопку для вызова sideBar
-        
-        let revealViewController = self.revealViewController() as SWRevealViewController
-        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        //self.navigationController?.navigationBarHidden = false;
-        
-        let revealButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem(rawValue: 15)!, target: revealViewController, action: Selector("rightRevealToggle:"))
-        revealButton.tintColor = UIColor.whiteColor()
-        self.navigationItem.rightBarButtonItem = revealButton
-        
         //Mark: заголовок и кнопка "Назад"
         self.navigationItem.title = "ОТКЛИК НА ВАКАНСИЮ"
         let buttonBack: UIButton = UIButton(type: .Custom);

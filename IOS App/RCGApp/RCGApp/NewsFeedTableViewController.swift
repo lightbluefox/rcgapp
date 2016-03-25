@@ -28,13 +28,13 @@ class NewsFeedTableViewController: UITableViewController {
         
         //Добавляем кнопку для вызоа sideBar
         
-        let revealViewController = self.revealViewController() as SWRevealViewController
-        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        //let revealViewController = self.revealViewController() as SWRevealViewController
+        //self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         //self.navigationController?.navigationBarHidden = false;
         
-        let revealButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem(rawValue: 15)!, target: revealViewController, action: Selector("rightRevealToggle:"))
-        revealButton.tintColor = UIColor.whiteColor()
-        self.navigationItem.rightBarButtonItem = revealButton
+        //let revealButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem(rawValue: 15)!, target: revealViewController, action: Selector("rightRevealToggle:"))
+        //revealButton.tintColor = UIColor.whiteColor()
+        //self.navigationItem.rightBarButtonItem = revealButton
         
         
         //Описываем пул-ту-рефреш
@@ -53,7 +53,7 @@ class NewsFeedTableViewController: UITableViewController {
         let tabBar = self.tabBarController?.tabBar;
         
         tabBar?.tintColor = UIColor.whiteColor();
-        let tabItems = tabBar?.items;
+        /*let tabItems = tabBar?.items;
         let tabItem0 = tabItems![0] ;
         tabItem0.image = UIImage(named:"news")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal);
         tabItem0.selectedImage = UIImage(named:"newsSelected")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal);
@@ -62,14 +62,14 @@ class NewsFeedTableViewController: UITableViewController {
         tabItem1.image = UIImage(named:"vacancy")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal);
         tabItem1.selectedImage = UIImage(named:"vacancySelected")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal);
         
-        /*
-        Обратная связь - скрыта, т.к. переехала в SideBar
+        
         
         let tabItem2 = tabItems![2] ;
         tabItem2.image = UIImage(named:"feedback")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal);
-        tabItem2.selectedImage = UIImage(named:"feedbackSelected")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal);*/
-        //
+        tabItem2.selectedImage = UIImage(named:"feedbackSelected")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal);
+        */
         self.newsFeedTableView.rowHeight = 80;
+        
         
         //MARK: используя MBProgressHUD делаем экран загрузки, пока подгружаются новости
         let loadingNotification = MBProgressHUD.showHUDAddedTo(self.navigationController?.view, animated: true)

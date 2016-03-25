@@ -26,14 +26,6 @@ class ContactUsViewController: UIViewController, UITextViewDelegate {
         self.navigationController?.navigationBar.translucent = false;
         //Добавляем кнопку для вызоа sideBar
         
-        let revealViewController = self.revealViewController() as SWRevealViewController
-        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        //self.navigationController?.navigationBarHidden = false;
-        
-        let revealButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem(rawValue: 15)!, target: revealViewController, action: Selector("rightRevealToggle:"))
-        revealButton.tintColor = UIColor.whiteColor()
-        self.navigationItem.rightBarButtonItem = revealButton
-        
         //Mark: Скрывать, клавиатуру при тапе по скрол вью
         let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "hideKeyboard:");
         tapGesture.cancelsTouchesInView = false
